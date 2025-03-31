@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  :root {
+    --main-green: #4a7b56; 
+    --main-grey: #f2f2f2;
+    --dark-grey: #333;
+    --white: #fff;
+  }
+  
+  /* Header */
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-weight: bold;
+  }
+  
+  .nav-links li a.active,
+  .nav-links li a:hover {
+    color: var(--main-green);
+  }
+  
+  /* Services Hero */
+  .services-hero {
+    background: url("img/services-hero.jpg") center/cover no-repeat;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .services-hero::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .services-hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+  }
+  
+  /* Services Intro */
+  .services-intro {
+    background-color: var(--main-grey);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Services List */
+  .services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .services-list article {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-list h2 {
+    color: var(--main-green);
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer */
+  .main-footer {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  
+  .main-footer p,
+  .main-footer a {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+  }
+  
+  .main-footer a {
+    color: var(--main-green);
+    text-decoration: none;
+  }
+  
+  .main-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

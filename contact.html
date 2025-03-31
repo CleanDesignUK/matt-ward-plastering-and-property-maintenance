@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Matt Ward Plastering & Property Maintenance</title>
+  <meta name="description" content="Send us a message to get your free quote. Matt Ward Plastering & Property Maintenance offers high-quality plastering, painting, tiling, and more.">
+  
+  <!-- Google Fonts -->
+  <!-- Title: Josefin Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Subtitle: Mulish -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Body: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="matt-ward-ppm-logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item ms-3">
+            <a href="contact.html" class="btn btn-contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- HERO SECTION with Overlay Image -->
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <div class="container text-center">
+        <h1>Contact Us for Plastering &amp; Property Maintenance</h1>
+        <h2>High Quality Plastering &amp; Building Services - 30 Years Experience</h2>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CONTACT SECTION -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="row align-items-start">
+        <!-- Contact Form on the LEFT -->
+        <div class="col-lg-6 mt-5 mt-lg-0">
+          <h3>Get in Touch</h3>
+          <p>We'd love to hear from you! Please fill out the form below regarding any inquiries or service requests. We'll get back to you as soon as possible.</p>
+          <form action="https://api.web3forms.com/submit" method="POST" class="card p-4 shadow">
+            <!-- Replace with your Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+            <input type="hidden" name="success_url" value="https://yourwebsite.com/thank-you.html">
+            <input type="hidden" name="error_url" value="https://yourwebsite.com/error.html">
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+  
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+  
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName">
+            </div>
+  
+            <div class="mb-3">
+              <label for="emailAddress" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="emailAddress" name="email" required>
+            </div>
+  
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phoneNumber" name="phone">
+            </div>
+  
+            <div class="mb-3">
+              <label for="messageField" class="form-label">Message</label>
+              <textarea class="form-control" id="messageField" name="message" rows="4" required></textarea>
+            </div>
+  
+            <button type="submit" class="btn btn-success w-100">Submit</button>
+          </form>
+        </div>
+        
+        <!-- Company Info & Map on the RIGHT -->
+        <div class="col-lg-6">
+          <!-- Company Info above the map -->
+          <h3 class="mt-5 mt-lg-0">Matt Ward Plastering &amp; Property Maintenance</h3>
+          <p><strong>18 Tros Yr Afon, Llangoed, Beaumaris LL58 8AT, United Kingdom 48916</strong></p>
+          <p>Phone: 07724 648916</p>
+          <p>Email: <a href="mailto:Mattwardpm@gmail.com">Mattwardpm@gmail.com</a></p>
+          <h5>Follow Us</h5>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <a href="https://www.facebook.com/people/matt-ward-property-maintenance/61560267006826/" target="_blank">
+              <i class="bi bi-facebook fs-4"></i>
+            </a>
+            <a href="https://g.co/kgs/ZkCtjjj" target="_blank">
+              <i class="bi bi-google fs-4"></i>
+            </a>
+          </div>
+          <!-- Map below the details -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2384.818364213446!2d-4.088165323271716!3d53.292788672273886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4865014855906ceb%3A0x6f13f6fc74191f97!2sS%20%2B%20M%20WARD-Plastering%20and%20property%20services!5e0!3m2!1sen!2sid!4v1743418291099!5m2!1sen!2sid"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ SECTION with 5 FAQs -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <p class="text-center subtitle mb-4">
+        Find answers to common questions about our plastering, painting, tiling, and property maintenance services.
+      </p>
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1"
+                    aria-expanded="true" aria-controls="faqCollapse1">
+              Why choose your professional plastering services?
+            </button>
+          </h2>
+          <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our professional plastering services combine over 30 years of expertise with quality workmanship, ensuring a flawless finish and lasting durability on every project.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2"
+                    aria-expanded="false" aria-controls="faqCollapse2">
+              Do you offer comprehensive painting and decorating services?
+            </button>
+          </h2>
+          <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, our comprehensive painting and decorating services cover both interior and exterior projects, delivering premium finishes that enhance the beauty and value of your property.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3"
+                    aria-expanded="false" aria-controls="faqCollapse3">
+              What can I expect from your expert tiling services?
+            </button>
+          </h2>
+          <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our expert tiling services provide precision installation in kitchens, bathrooms, floors, and walls, ensuring a sleek, durable finish with the highest quality materials.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4"
+                    aria-expanded="false" aria-controls="faqCollapse4">
+              How does your comprehensive property maintenance service work?
+            </button>
+          </h2>
+          <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our comprehensive property maintenance service offers a full range of solutions—from routine repairs to complete renovations—ensuring your property remains safe, efficient, and visually appealing.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faqHeading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5"
+                    aria-expanded="false" aria-controls="faqCollapse5">
+              What benefits does your professional painting and decorating service provide?
+            </button>
+          </h2>
+          <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Our professional painting and decorating service not only enhances the aesthetic appeal of your space but also increases property value with meticulous attention to detail and quality finishes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="row">
+        <!-- Logo & Newsletter -->
+        <div class="col-md-4 mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;">
+            <span class="ms-2 fw-bold" style="font-family: 'Josefin Sans', sans-serif;">Matt Ward Plastering &amp; Property Maintenance</span>
+          </div>
+          <p>
+            Over 30 years of experience in plastering, property maintenance, and building services, serving Beaumaris, Anglesey, and Gwynedd.
+          </p>
+          <div class="newsletter-form mt-3 d-flex">
+            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address">
+            <button class="ms-2">Submit</button>
+          </div>
+        </div>
+        <!-- Pages Links -->
+        <div class="col-md-2 mb-4">
+          <h5>Pages</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Follow Us -->
+        <div class="col-md-2 mb-4">
+          <h5>Follow Us</h5>
+          <div class="d-flex gap-2">
+            <a href="https://www.facebook.com/people/matt-ward-property-maintenance/61560267006826/" target="_blank">
+                <i class="bi bi-facebook fs-4"></i>
+              </a>
+              <a href="https://g.co/kgs/ZkCtjjj" target="_blank">
+                <i class="bi bi-google fs-4"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>© 2025 Matt Ward Plastering &amp; Property Maintenance</p>
+        Website Design by <strong><a href="https://www.cleandesignuk.com">Clean Design UK</strong></a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
