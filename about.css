@@ -1,75 +1,91 @@
-/* 
-  Color Palette from your original design
-  + Additional styling for the new sections
+/*
+  About Page CSS
+  This file replicates the exact navbar, footer, and color scheme of the Services page.
+  WOW factor has been added via fadeInUp animations on major sections.
 */
+
+/* Variables */
 :root {
-    --accent: #4a7b56;
-    --gray: #f2f2f2;
-    --dark: #333;
-    --white: #ffffff;
+  --title-color: #7f797d;
+  --subtitle-color: #7f797d;
+  --btn-bg: #645e62;
+  --btn-text: #deda7a;
+  --btn-hover-bg: #deda7a;
+  --btn-hover-text: #645e62;
+  --footer-bg: #ffffff;
+  --footer-text: #645e62;
+  --bg-color: #f0f3ee;
+  --navbar-text: #7f797d;
+  --navbar-bg: #ffffff;
+  --gray: #f2f2f2;
+  --dark: #333;
+  --white: #ffffff;
 }
 
-/* Prevent horizontal scrolling */
-html, body {
+/* Base Reset */
+* {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
-
 body {
   font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
   color: var(--dark);
-  background-color: var(--white);
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
+  color: var(--title-color);
 }
 .subtitle {
   font-family: 'Mulish', sans-serif;
+  color: var(--subtitle-color);
 }
 
-/* Override default container padding to fix side margins */
-.container {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-@media (max-width: 576px) {
-  .container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
-/* NAVBAR (make it sticky) */
+/* NAVBAR (Sticky, same as Services) */
 .sticky-navbar {
   position: sticky;
   top: 0;
   z-index: 9999;
-  background-color: var(--white);
+  background-color: var(--navbar-bg);
   border-bottom: 1px solid var(--gray);
 }
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
 .navbar-brand img {
-  height: 40px;
+  height: 80px;
   object-fit: contain;
+}
+.company-name {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--title-color);
+}
+@media (max-width: 576px) {
+  .company-name {
+    display: none;
+  }
 }
 .navbar-nav .nav-link,
 .navbar-toggler-icon {
-  color: var(--dark) !important;
+  color: var(--navbar-text) !important;
 }
 .nav-link.active,
 .nav-link:hover {
   text-decoration: underline;
 }
 .btn-contact {
-  background-color: var(--white);
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
   transition: all 0.3s ease;
 }
 .btn-contact:hover {
-  background-color: var(--accent);
-  color: var(--white);
-  border: 2px solid var(--accent);
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
 /* HERO SECTION */
@@ -78,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 800px;
   background: url('about-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInUp 1.5s ease-out;
 }
 .about-hero-overlay {
   background-color: rgba(0, 0, 0, 0.4);
@@ -88,6 +108,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .about-hero-overlay h1 {
   font-size: 2.5rem;
@@ -101,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ABOUT INTRO */
 .about-intro {
   padding: 3rem 0;
+  animation: fadeInUp 1.5s ease-out;
 }
 .about-row {
   display: flex;
@@ -126,11 +148,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 .about-col h2 {
-  font-size: 2rem; 
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 .about-col p {
-  line-height: 1.8; 
+  line-height: 1.8;
   margin-bottom: 1.5rem;
   color: #555;
 }
@@ -156,6 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
+  animation: fadeInUp 1.5s ease-out;
 }
 .stat-box {
   flex: 1 1 calc(25% - 1rem);
@@ -163,6 +186,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 2rem 1rem;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.stat-box:hover {
+  transform: scale(1.05);
 }
 .stat-box h2 {
   font-size: 2rem;
@@ -177,6 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 /* VISION & MISSION */
 .vision-mission {
   padding: 2rem 0;
+  animation: fadeInUp 1.5s ease-out;
 }
 .vision-mission h2 {
   text-align: center;
@@ -219,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 .benefits-section {
   padding: 3rem 0;
   text-align: center;
+  animation: fadeInUp 1.5s ease-out;
 }
 .benefits-section h2 {
   font-size: 2rem;
@@ -234,9 +263,13 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #eee;
   border-radius: 8px;
   padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+}
+.benefit-box:hover {
+  transform: scale(1.03);
 }
 .benefit-box i {
-  font-size: 3rem; 
+  font-size: 3rem;
   color: #666;
   margin-bottom: 1rem;
 }
@@ -270,12 +303,12 @@ h1, h2, h3, h4, h5, h6 {
 .testimonials {
   padding: 3rem 0;
   text-align: center;
+  animation: fadeInUp 1.5s ease-out;
 }
 .testimonials h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
-/* Slider container */
 .testimonial-slider {
   position: relative;
   overflow: hidden;
@@ -301,7 +334,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: #333;
 }
-/* Prev / Next buttons */
 .testimonial-controls {
   margin-top: 1rem;
 }
@@ -325,6 +357,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding: 3rem 1rem;
   text-align: center;
+  animation: fadeInUp 1.5s ease-out;
 }
 .cta-content h2 {
   font-size: 2rem;
@@ -337,12 +370,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FOOTER */
 .footer-dark {
-  background-color: #cccccc;
-  color: var(--dark);
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 3rem 1rem;
 }
 .footer-dark a {
-  color: var(--dark);
+  color: var(--footer-text);
   text-decoration: none;
 }
 .footer-dark a:hover {
@@ -367,11 +400,19 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.8;
 }
 
-/*====================================
-    EXISTING MEDIA QUERIES
-====================================*/
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-/* Stack about-col and founder-col on smaller screens */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .about-row {
     flex-direction: column;
@@ -379,10 +420,6 @@ h1, h2, h3, h4, h5, h6 {
   .about-col, .founder-col {
     flex: 1 1 100%;
   }
-}
-
-/* Adjust stats row to stack on smaller screens */
-@media (max-width: 992px) {
   .stat-box {
     flex: 1 1 calc(50% - 1rem);
   }
@@ -391,35 +428,6 @@ h1, h2, h3, h4, h5, h6 {
   .stat-box {
     flex: 1 1 100%;
   }
-}
-
-/* Vision & Mission: stack image and text on smaller screens */
-@media (max-width: 768px) {
-  .vision-mission-wrap {
-    flex-direction: column;
-  }
-  .vision-mission-img, .vision-mission-text {
-    flex: 1 1 100%;
-  }
-}
-
-/* Key Benefits: reduce columns on smaller screens */
-@media (max-width: 992px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/*====================================
-    ADDITIONAL MEDIA QUERIES FOR BETTER SCALING
-====================================*/
-@media (max-width: 576px) {
-  /* Make hero shorter, reduce text size */
   .about-hero {
     height: 300px;
   }
@@ -429,32 +437,26 @@ h1, h2, h3, h4, h5, h6 {
   .about-hero-overlay p {
     font-size: 1rem;
   }
-  /* Reduce heading sizes in about-col */
   .about-col h2 {
     font-size: 1.6rem;
   }
-  /* Slightly reduce paragraph text */
   .about-col p {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 1rem;
   }
-  /* Adjust main section headings */
   .vision-mission h2,
   .benefits-section h2,
   .testimonials h2,
   .cta-section h2 {
     font-size: 1.6rem;
   }
-  /* Adjust CTA text */
   .cta-section p {
     font-size: 0.95rem;
   }
-  /* Adjust icon sizes a bit */
   .benefit-box i {
     font-size: 2rem;
   }
-  /* Adjust button sizing */
   .btn-appointment {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;

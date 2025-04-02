@@ -1,0 +1,411 @@
+/*
+  Renovations Page
+  EXACT layout & style matching your Plastering page:
+  - Hero with left text + right image
+  - Bento Box Tabs Section
+  - "Create with the Heart, Build with the Mind" Section (5-image carousel)
+  - Testimonials Section
+  - Footer
+  
+  ONLY content has been updated to focus on property renovations and repairs with SEO keywords.
+*/
+
+/* Variables (matching Services color scheme) */
+:root {
+    --title-color: #7f797d;
+    --subtitle-color: #7f797d;
+    --btn-bg: #645e62;
+    --btn-text: #deda7a;
+    --btn-hover-bg: #deda7a;
+    --btn-hover-text: #645e62;
+    --footer-bg: #ffffff;
+    --footer-text: #645e62;
+    --bg-color: #f0f3ee;
+    --navbar-text: #7f797d;
+    --navbar-bg: #ffffff;
+    --gray: #f2f2f2;
+    --dark: #333;
+    --white: #ffffff;
+  }
+  
+  /* Base Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--title-color);
+  }
+  .subtitle {
+    font-family: 'Mulish', sans-serif;
+    color: var(--subtitle-color);
+  }
+  
+  /* NAVBAR (same as Services) */
+  .sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--gray);
+  }
+  .navbar-brand img {
+    height: 80px;
+    object-fit: contain;
+  }
+  .company-name {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--title-color);
+  }
+  @media (max-width: 576px) {
+    .company-name {
+      display: none;
+    }
+  }
+  .navbar-nav .nav-link,
+  .navbar-toggler-icon {
+    color: var(--navbar-text) !important;
+  }
+  .nav-link.active,
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  .btn-contact {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .btn-contact:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+  }
+  
+  /* Reusable Buttons */
+  .btn-purchase {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+  .btn-purchase:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+  }
+  .btn-hire {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+  .btn-hire:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+  }
+  .btn-reviews {
+    background-color: #deda7a;
+    color: #645e62;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+  .btn-reviews:hover {
+    opacity: 0.8;
+  }
+  .btn-link-card {
+    color: var(--btn-bg);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .btn-link-card:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section (Section 1) */
+  .plastering-hero {
+    min-height: 600px;
+    background-color: #eaeaea;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 3rem 1rem;
+  }
+  .plastering-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  .plastering-subheading {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    color: var(--subtitle-color);
+  }
+  .hero-img-col {
+    margin-top: 2rem;
+  }
+  .hero-img {
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* SECTION 2: Bento Box Tabs (Painting &amp; Decorating replaced by Renovations) */
+  /* (Now updated for Renovations content in this page, but for tiling we keep style identical) */
+  .tabs-section.bento-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 3rem auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+  }
+  .nav-tabs .nav-link {
+    border: none;
+    background-color: transparent;
+    color: var(--dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+  .nav-tabs .nav-link.active {
+    color: var(--btn-bg);
+    border-bottom: 3px solid var(--btn-bg);
+  }
+  .tab-content {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .tab-content .row img {
+    margin-bottom: 1.5rem;
+  }
+  .tab-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--btn-bg);
+  }
+  .tab-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark);
+  }
+  .bottom-card {
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    padding: 2rem;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .bottom-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+  }
+  .bottom-card i {
+    color: #deda7a;
+    margin-bottom: 0.75rem;
+  }
+  .bottom-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    color: var(--dark);
+  }
+  .bottom-card p {
+    font-size: 0.9rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+  }
+  
+  /* SECTION 3: "Create with the Heart" Section */
+  .create-section {
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+  }
+
+  .create-text-col {
+    margin-bottom: 2rem;
+  }
+  .create-text-col .btn-hire {
+    margin-bottom: 1.5rem;
+  }
+  .create-carousel-col img {
+    padding: 1rem;
+  }
+  
+  /* SECTION 4: "WHAT THEY SAY" Section */
+  .testimonials-section {
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+  }
+  .blue-shape {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 50%;
+    background-color: #deda7a;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    z-index: 1;
+  }
+  .testimonial-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+  .testimonial-box i {
+    color: var(--btn-bg);
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-box p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+  }
+  .testimonial-box h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--dark);
+  }
+  .testimonial-box span {
+    font-size: 0.8rem;
+    color: #999999;
+  }
+  .testimonials-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    position: relative;
+    z-index: 2;
+  }
+  .testimonials-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark);
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* CTA for "View More Reviews" */
+  .btn-reviews {
+    margin-top: 1rem;
+    background-color: #deda7a;
+    color: #645e62;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    text-decoration: none;
+  }
+  .btn-reviews:hover {
+    opacity: 0.8;
+  }
+  
+  /* FOOTER */
+  .footer-dark {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 3rem 1rem;
+  }
+  .footer-dark a {
+    color: var(--footer-text);
+    text-decoration: none;
+  }
+  .footer-dark a:hover {
+    text-decoration: underline;
+  }
+  .newsletter-form input {
+    border: none;
+    padding: 0.5rem;
+    width: 70%;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+  }
+  .newsletter-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  .newsletter-form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .blue-shape {
+      width: 40%;
+    }
+    .testimonial-box {
+      width: 180px;
+    }
+  }
+  @media (max-width: 576px) {
+    .company-name {
+      display: none;
+    }
+    .plastering-hero {
+      padding: 2rem 1rem;
+      min-height: 500px;
+    }
+    .plastering-heading {
+      font-size: 2rem;
+    }
+    .plastering-subheading {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-img {
+      max-width: 250px;
+      margin-top: 1rem;
+    }
+    .tabs-section.bento-box .nav-link {
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .tabs-section.bento-box .tab-content {
+      margin-top: 1rem;
+    }
+    .create-section {
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .create-row-spacing {
+      padding: 0 1rem;
+      row-gap: 1.5rem;
+      column-gap: 1rem;
+    }
+    .create-text-col .btn-hire {
+      margin-bottom: 1rem;
+    }
+    .create-carousel-col img {
+      padding: 0.5rem;
+    }
+  }
+  

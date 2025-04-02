@@ -2,29 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Our Services: Plastering, Painting & Decorating, Tiling, Renovations, Repairs, Extensions, Kitchens, Bathrooms, Sheds, Paving & More." />
-  <meta name="keywords" content="plasterers near me, painter decorator near me, tilers near me, house repair, property maintenance near me" />
+  <meta name="description" content="Our Services: Plastering, Painting &amp; Decorating, Tiling, Renovations, Repairs, Extensions, Kitchens, Bathrooms, Sheds, Paving &amp; More." />
+  <meta name="keywords" content="plasterers near me, painter and decorator near me, painting and decorating, tilers near me, property maintenance" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matt Ward | Our Services</title>
+  <title>Our Services | Matt Ward Plastering &amp; Property Maintenance</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Mulish:wght@200;300;400;600;700;900&family=Inter:wght@100;300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+  
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  />
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="services.css" />
 </head>
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg">
+  <!--======================
+      NAVBAR (matching index)
+  ======================-->
+  <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="img/logo.png" alt="Logo">
+        <img src="matt-ward-ppm-logo.png" alt="Matt Ward Logo" />
+        <span class="company-name ms-2">Matt Ward Plastering &amp; Property Maintenance</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">Services</a>
+          </li>
           <li class="nav-item ms-3">
             <a href="contact.html" class="btn btn-contact">Contact Us</a>
           </li>
@@ -32,73 +71,285 @@
       </div>
     </div>
   </nav>
-  
-  <!-- HERO SECTION with Overlay Image -->
-  <section class="hero-section">
-    <div class="hero-overlay">
+
+  <!--======================
+      HERO SECTION
+  ======================-->
+  <section class="services-hero">
+    <div class="services-hero-overlay">
       <div class="container text-center">
-        <h1>Contact Us for Plastering &amp; Property Maintenance</h1>
-        <h2>High Quality Plastering &amp; Building Services - 30 Years Experience</h2>
+        <h1>Our Range of Quality Services</h1>
+        <p>Plastering, Painting &amp; Decorating, Tiling, Renovations, Repairs &amp; More</p>
       </div>
     </div>
   </section>
-  <main>
-    <section class="services-intro">
-      <p>
-        We offer a comprehensive range of building and renovation services. Whether
-        you need a <strong>local plasterer</strong>, a <strong>painter &amp; decorator</strong>,
-        or an experienced team to handle your next home improvement project,
-        Matt Ward Plastering &amp; Property Maintenance is here for you.
+
+  <!--======================
+      SERVICES INTRO
+  ======================-->
+  <section class="services-intro container text-center">
+    <p>
+      We offer a comprehensive range of building and renovation solutions. Whether you need a
+      <strong>local plasterer</strong>, a <strong>painter &amp; decorator</strong>, or an experienced team to handle
+      your next home improvement project, Matt Ward Plastering &amp; Property Maintenance is here for you.
+    </p>
+  </section>
+
+  <!--======================
+      SERVICES LIST (3-column layout with portrait image in the middle)
+  ======================-->
+  <section class="services-list container">
+    <div class="row">
+      <!-- Left Column: Two Services -->
+      <div class="col-md-4 d-flex flex-column justify-content-between">
+        <!-- Plastering -->
+        <div class="service-box mb-4">
+          <i class="bi bi-bricks service-box-icon"></i>
+          <h3 class="service-box-title">PLASTERING</h3>
+          <p class="service-box-text">
+            From fixing cracks to full skim coats, our plastering services will give your walls a smooth, flawless finish.
+          </p>
+          <a href="plastering.html" class="service-box-link">READ MORE</a>
+        </div>
+        <!-- Painting & Decorating -->
+        <div class="service-box mt-4">
+          <i class="bi bi-paint-bucket service-box-icon"></i>
+          <h3 class="service-box-title">PAINTING &amp; DECORATING</h3>
+          <p class="service-box-text">
+            Interior, exterior, single rooms, or entire properties—we handle it all to deliver a fresh, high-quality result.
+          </p>
+          <a href="painting.html" class="service-box-link">READ MORE</a>
+        </div>
+      </div>
+
+      <!-- Middle Column: Portrait Image -->
+      <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+        <div class="portrait-wrapper position-relative">
+          <!-- Replace 'services-1.jpg' with your actual portrait image if desired -->
+          <img src="services-1.jpg" alt="Center Portrait" class="img-fluid" />
+        </div>
+      </div>
+
+      <!-- Right Column: Two Services -->
+      <div class="col-md-4 d-flex flex-column justify-content-between">
+        <!-- Tiling -->
+        <div class="service-box mb-4">
+          <i class="bi bi-layers service-box-icon"></i>
+          <h3 class="service-box-title">TILING</h3>
+          <p class="service-box-text">
+            We provide professional tiling, from kitchens to bathrooms, floors to walls, ensuring a precise and durable finish.
+          </p>
+          <a href="tiling.html" class="service-box-link">READ MORE</a>
+        </div>
+        <!-- Renovations & Repairs -->
+        <div class="service-box mt-4">
+          <i class="bi bi-hammer service-box-icon"></i>
+          <h3 class="service-box-title">RENOVATIONS &amp; REPAIRS</h3>
+          <p class="service-box-text">
+            Small extensions, kitchens, bathrooms, sheds, paving—we have the expertise to upgrade and maintain your property.
+          </p>
+          <a href="renovations.html" class="service-box-link">READ MORE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--======================
+      WHY CHOOSE US? SECTION
+  ======================-->
+  <section class="why-choose-us">
+    <div class="container text-center">
+      <h2>WHY CHOOSE US?</h2>
+      <!-- Stats Row with WOW factor and decorative background -->
+      <div class="row justify-content-center stats-row">
+        <!-- Stat Card 1 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-icon">
+              <i class="bi bi-calendar-check"></i>
+            </div>
+            <h3>30</h3>
+            <p>YEARS</p>
+            <p class="stat-desc">With over 30 years of experience, our local plastering services set the benchmark for quality service.</p>
+          </div>
+        </div>
+        <!-- Stat Card 2 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-icon">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <h3>NVQ</h3>
+            <p>LEVEL 3</p>
+            <p class="stat-desc">Certified with NVQ Level 3, we excel in painting and decorating with unmatched precision.</p>
+          </div>
+        </div>
+        <!-- Stat Card 3 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-icon">
+              <i class="bi bi-trophy-fill"></i>
+            </div>
+            <h3>LABC</h3>
+            <p>AWARDS</p>
+            <p class="stat-desc">Our LABC-awarded team is renowned for outstanding property maintenance and tiling expertise.</p>
+          </div>
+        </div>
+        <!-- Stat Card 4 -->
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-icon">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <h3>EXPERT</h3>
+            <p>TEAM</p>
+            <p class="stat-desc">Our expert team, trusted as local tilers and more, delivers exceptional results every time.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sub-CTA text -->
+      <p class="cta-text">
+        Find out why our clients love us
       </p>
-    </section>
+      <!-- Testimonials Row -->
+      <div class="row testimonials-row">
+        <!-- Testimonial 1: Julian Wood -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <i class="bi bi-chat-quote"></i>
+            <p>
+              “Praises our traditional building standards and exceptional skills honed through a generational apprenticeship.”
+            </p>
+            <h4>Julian Wood</h4>
+            <span>Client</span>
+          </div>
+        </div>
+        <!-- Testimonial 2: Geraint Evans -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <i class="bi bi-chat-quote"></i>
+            <p>
+              “Consistently trusts Matt for various house projects – his workmanship is first class, meticulous and leaves everything spotless.”
+            </p>
+            <h4>Geraint Evans</h4>
+            <span>Client</span>
+          </div>
+        </div>
+        <!-- Testimonial 3: David Owen -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <i class="bi bi-chat-quote"></i>
+            <p>
+              “The ultimate professional – versatile, punctual and always delivers top-quality work with a tidy finish.”
+            </p>
+            <h4>David Owen</h4>
+            <span>Client</span>
+          </div>
+        </div>
+      </div>
+      <!-- CTA Button to see more reviews -->
+      <a href="https://g.co/kgs/mmPQs5U" class="btn btn-green review-cta">See More Reviews</a>
+    </div>
+  </section>
 
-    <section class="services-list">
-      <article>
-        <h2>Plastering</h2>
-        <p>
-          From fixing cracks to full skim coats, our plastering services will give
-          your walls a smooth, flawless finish.
-        </p>
-      </article>
+  <!--======================
+      NEW SPLIT SECTION
+  ======================-->
+  <section class="split-cta-section container-fluid">
+    <div class="row g-0">
+      <!-- Left Image -->
+      <div class="col-md-6">
+        <img
+          src="services-2.jpg"
+          alt="Services Section"
+          class="img-fluid w-100"
+          style="object-fit: cover; height: 100%;"
+        />
+      </div>
+      <!-- Right CTA Box -->
+      <div class="col-md-6 split-cta-box d-flex flex-column justify-content-center">
+        <div class="content-wrapper text-center text-md-start px-4 px-md-5">
+          <span class="cta-label mb-2 d-block">CONTACT US</span>
+          <h2 class="cta-heading">Ready to work together?</h2>
+          <p>
+            Looking for a reliable team to tackle your next project? We specialise in everything from plastering to full
+            renovations. Get in touch to discuss how we can help bring your vision to life.
+          </p>
+          <a href="contact.html" class="btn btn-green">Contact Our Team &raquo;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <article>
-        <h2>Painting &amp; Decorating</h2>
-        <p>
-          Interior, exterior, single rooms, or entire properties—we handle it all to
-          deliver a fresh, high-quality result.
-        </p>
-      </article>
-
-      <article>
-        <h2>Tiling</h2>
-        <p>
-          We provide professional tiling, from kitchens to bathrooms, floors to walls,
-          ensuring a precise and durable finish.
-        </p>
-      </article>
-
-      <article>
-        <h2>Renovations &amp; Repairs</h2>
-        <p>
-          Small extensions, kitchens, bathrooms, sheds, paving—we have the expertise
-          to upgrade and maintain your home or property.
-        </p>
-      </article>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="main-footer">
-    <div class="footer-info">
-      <p>&copy; <span id="year"></span> Matt Ward Plastering &amp; Property Maintenance</p>
-      <p><strong>Phone:</strong> 07724 648916</p>
-      <p><strong>Email:</strong> <a href="mailto:Mattwardpm@gmail.com">Mattwardpm@gmail.com</a></p>
+  <!--======================
+      FOOTER (white background)
+  ======================-->
+  <footer class="footer-dark">
+    <div class="container">
+      <div class="row">
+        <!-- Logo & Newsletter -->
+        <div class="col-md-4 mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;" />
+            <span class="ms-2 fw-bold" style="font-family: 'Josefin Sans', sans-serif;">
+              Matt Ward Plastering &amp; Property Maintenance
+            </span>
+          </div>
+          <p>
+            Over 30 years of experience in plastering, painting &amp; decorating, tiling, and property maintenance. Based in
+            Beaumaris, serving Anglesey, Gwynedd, and beyond.
+          </p>
+          <div class="newsletter-form mt-3 d-flex">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email address..."
+              aria-label="Email address"
+            />
+            <button class="ms-2">Submit</button>
+          </div>
+        </div>
+        <!-- Pages Links -->
+        <div class="col-md-2 mb-4">
+          <h5>Pages</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Follow Us -->
+        <div class="col-md-2 mb-4">
+          <h5>Follow Us</h5>
+          <div class="d-flex gap-2">
+            <a
+              href="https://www.facebook.com/people/matt-ward-property-maintenance/61560267006826/"
+              target="_blank"
+            >
+              <i class="bi bi-facebook fs-4"></i>
+            </a>
+            <a href="https://g.co/kgs/ZkCtjjj" target="_blank">
+              <i class="bi bi-google fs-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>© 2025 Matt Ward Plastering &amp; Property Maintenance</p>
+        Website Design by
+        <strong>
+          <a href="https://www.cleandesignuk.com">Clean Design UK</a>
+        </strong>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Set the current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>

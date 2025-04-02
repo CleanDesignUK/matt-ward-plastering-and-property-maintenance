@@ -1,11 +1,32 @@
 /*
-  Color palette and basic styling for the index page
+  Classy, professional color scheme refined using the main colors #7f797d and #deda7a with updated button styles.
+  - Titles & Subtitles (H1 & H2 outside hero): #7f797d (hero text remains white)
+  - CTA Buttons:
+       • .btn-green: Now, for the hero section, background is set to #deda7a and font color to #645e62;
+         on hover, they swap (background becomes #645e62 with text #deda7a).
+       • .btn-outline-green: Background #deda7a with text #645e62; on hover, swap to background #645e62 with text #deda7a.
+       (Both variants have no border.)
+  - Navbar: White background with navbar text in #7f797d.
+  - Page Background: #f0f3ee.
+  - Footer: Background #f0f3ee.
+  - Final CTA Section: Background #645e62.
+  Additional complementary shades and transitions are added.
 */
 :root {
-    --accent: #4a7b56;
-    --gray: #f2f2f2;
-    --dark: #333;
-    --white: #ffffff;
+  --title-color: #7f797d;
+  --subtitle-color: #7f797d;
+  --btn-bg: #645e62;           /* Default button background (for non-hero sections) */
+  --btn-text: #deda7a;         /* Default button text */
+  --btn-hover-bg: #deda7a;      /* On hover, background swaps */
+  --btn-hover-text: #645e62;    /* On hover, text swaps */
+  --footer-bg: #f0f3ee;
+  --footer-text: #645e62;
+  --bg-color: #f0f3ee;
+  --navbar-text: #7f797d;
+  --navbar-bg: #ffffff;
+  --gray: #f2f2f2;
+  --dark: #333;
+  --white: #ffffff;
 }
 
 /* Keyframes for fade-in hero effect */
@@ -27,14 +48,16 @@ html, body {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--white);
+  background-color: var(--bg-color);
   color: var(--dark);
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
+  color: var(--title-color);
 }
 .subtitle {
   font-family: 'Mulish', sans-serif;
+  color: var(--subtitle-color);
 }
 
 /* Container side-padding fix */
@@ -49,12 +72,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* NAVBAR (sticky) */
+/* NAVBAR */
 .sticky-navbar {
   position: sticky;
   top: 0;
   z-index: 9999;
-  background-color: var(--white);
+  background-color: var(--navbar-bg);
   border-bottom: 1px solid var(--gray);
 }
 .navbar-brand {
@@ -69,6 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem;
   margin-left: 0.5rem;
   font-family: 'Josefin Sans', sans-serif;
+  color: var(--title-color);
 }
 @media (max-width: 576px) {
   .company-name {
@@ -77,48 +101,58 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-nav .nav-link,
 .navbar-toggler-icon {
-  color: var(--dark) !important;
+  color: var(--navbar-text) !important;
 }
 .nav-link.active,
 .nav-link:hover {
   text-decoration: underline;
 }
 .btn-contact {
-  background-color: var(--white);
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
   transition: all 0.3s ease;
 }
 .btn-contact:hover {
-  background-color: var(--accent);
-  color: var(--white);
-  border: 2px solid var(--accent);
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
-/* Green CTA buttons */
+/* CTA BUTTONS */
+/* For general use (non-hero sections) */
 .btn-green {
-  background-color: var(--accent) !important;
-  color: var(--white) !important;
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
   border: none !important;
   font-weight: 500;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 .btn-green:hover {
-  background-color: #3d6547 !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-text) !important;
 }
 .btn-outline-green {
-  background-color: var(--white);
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  transition: all 0.3s;
+  background-color: var(--btn-text);
+  color: var(--btn-bg);
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 .btn-outline-green:hover {
-  background-color: var(--accent);
-  color: var(--white);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
 }
 
-/* HERO SECTION */
+/* Override CTA button in HERO SECTION */
+.hero-section .btn-green {
+  background-color: #deda7a !important;
+  color: #645e62 !important;
+}
+.hero-section .btn-green:hover {
+  background-color: #645e62 !important;
+  color: #deda7a !important;
+}
+
+/* HERO SECTION (hero text remains white) */
 .hero-section {
   position: relative;
   width: 100%;
@@ -138,14 +172,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white);
   padding: 0 1rem;
 }
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
+.hero-overlay h1,
 .hero-overlay p {
-  font-size: 1.2rem;
-  font-family: 'Mulish', sans-serif;
+  color: var(--white);
 }
 
 /* CORE SERVICES */
@@ -158,7 +187,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .core-services .subtitle {
   margin-bottom: 2rem;
-  color: #666;
   text-align: center;
 }
 .services-grid {
@@ -193,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-card p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #555;
+  color: var(--dark);
   margin-bottom: 1rem;
 }
 .service-card a {
@@ -202,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-/* RECENT PROJECTS - Masonry style with 3 columns, centered */
+/* RECENT PROJECTS */
 .recent-projects {
   padding: 3rem 0;
   text-align: center;
@@ -213,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .recent-projects .subtitle {
   margin-bottom: 2rem;
-  color: #666;
+  color: var(--dark);
 }
 .projects-masonry {
   column-count: 3;
@@ -249,7 +277,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .certs-awards .subtitle {
   margin-bottom: 2rem;
-  color: #666;
 }
 .certs-awards-grid {
   display: grid;
@@ -283,10 +310,10 @@ h1, h2, h3, h4, h5, h6 {
 .cert-box p {
   font-size: 1rem;
   line-height: 1.4;
-  color: #555;
+  color: var(--dark);
 }
 
-/* REVIEWS SECTION (Bento Box Slider) */
+/* REVIEWS SECTION */
 .reviews-section {
   padding: 3rem 0;
 }
@@ -313,13 +340,13 @@ h1, h2, h3, h4, h5, h6 {
 .review-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--dark);
   font-style: italic;
   margin-bottom: 1rem;
 }
 .review-author {
   font-weight: 600;
-  color: #333;
+  color: var(--dark);
 }
 .review-controls {
   text-align: center;
@@ -327,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .review-controls button {
   background-color: #ccc;
-  color: #333;
+  color: var(--dark);
   border: none;
   padding: 0.5rem 1rem;
   margin: 0 0.3rem;
@@ -339,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #bbb;
 }
 
-/* AREAS WE SERVE (Dark Grey Bento Box) */
+/* AREAS WE SERVE */
 .areas-served {
   padding: 3rem 0;
   text-align: center;
@@ -361,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white);
 }
 
-/* FAQ SECTION (Accordion in light grey box) */
+/* FAQ SECTION */
 .faq-section {
   padding: 3rem 0;
 }
@@ -383,15 +410,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--gray);
 }
 
-/* FINAL CTA */
+/* FINAL CTA (Ready to Begin Your Renovation?) */
 .final-cta-section {
-  background-color: #0a0a0a;
-  color: #fff;
+  background-color: #333;
+  color: #f0f3ee;
   text-align: center;
   padding: 3rem 1rem;
 }
 .final-cta-content h2 {
   font-size: 2rem;
+  color: #f0f3ee;
   margin-bottom: 1rem;
 }
 .final-cta-content p {
@@ -401,12 +429,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FOOTER */
 .footer-dark {
-  background-color: #cccccc;
-  color: var(--dark);
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   padding: 3rem 1rem;
 }
 .footer-dark a {
-  color: var(--dark);
+  color: var(--footer-text);
   text-decoration: none;
 }
 .footer-dark a:hover {
