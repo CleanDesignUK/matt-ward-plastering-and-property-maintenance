@@ -42,6 +42,7 @@
 <body>
   <!--======================
       NAVBAR (Sticky, same as Services)
+      (Remains EXACTLY as in your original)
   ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
@@ -73,12 +74,13 @@
 
   <!--======================
       TOP HERO / ABOUT SECTION
-      (WOW effect via fadeInUp)
+      (H1 font color to white as requested)
   ======================-->
   <section class="about-hero">
     <div class="about-hero-overlay fadeInUp">
       <h1>About Us</h1>
       <p>Your Trusted Partner in Plastering, Painting &amp; Renovations</p>
+      <a href="services.html" class="btn btn-appointment">Discover Expert Property Services</a>
     </div>
   </section>
 
@@ -208,13 +210,14 @@
       </div>
     </div>
     <div class="benefits-cta">
+      <!-- CTA buttons changed to #deda7a background and #645e62 text (with hover reversed) -->
       <a href="contact.html" class="btn-appointment">Schedule a Free Estimate</a>
     </div>
   </section>
 
   <!--======================
       TESTIMONIALS / REVIEWS
-      (Simple slider with fade transitions)
+      (Arrow color changed to #645e62, with #deda7a on hover/click)
   ======================-->
   <section class="testimonials container fadeInUp">
     <h2>Hear What Our Clients Have to Say</h2>
@@ -258,6 +261,7 @@
 
   <!--======================
       CALL TO ACTION
+      (Section background #deda7a, text #645e62, CTA button reversed)
   ======================-->
   <section class="cta-section fadeInUp">
     <div class="cta-content">
@@ -334,16 +338,19 @@
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     let currentSlide = 0;
+
     function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.classList.remove('active');
         if (i === index) slide.classList.add('active');
       });
     }
+
     prevBtn.addEventListener('click', () => {
       currentSlide = (currentSlide - 1 + slides.length) % slides.length;
       showSlide(currentSlide);
     });
+
     nextBtn.addEventListener('click', () => {
       currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);

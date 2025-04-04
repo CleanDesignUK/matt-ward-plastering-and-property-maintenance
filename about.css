@@ -8,10 +8,13 @@
 :root {
   --title-color: #7f797d;
   --subtitle-color: #7f797d;
-  --btn-bg: #645e62;
-  --btn-text: #deda7a;
-  --btn-hover-bg: #deda7a;
-  --btn-hover-text: #645e62;
+
+  /* The colors for the main CTA buttons and arrows, as per your request */
+  --btn-bg: #deda7a;
+  --btn-text: #645e62;
+  --btn-hover-bg: #645e62;
+  --btn-hover-text: #deda7a;
+
   --footer-bg: #ffffff;
   --footer-text: #645e62;
   --bg-color: #f0f3ee;
@@ -42,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--subtitle-color);
 }
 
-/* NAVBAR (Sticky, same as Services) */
+/* NAVBAR (Sticky, same as Services) - UNCHANGED */
 .sticky-navbar {
   position: sticky;
   top: 0;
@@ -77,18 +80,19 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link:hover {
   text-decoration: underline;
 }
+/* Contact button in navbar remains as it was originally */
 .btn-contact {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
+  background-color: #645e62;
+  color: #deda7a;
   border: none;
   transition: all 0.3s ease;
 }
 .btn-contact:hover {
-  background-color: var(--btn-hover-bg);
-  color: var(--btn-hover-text);
+  background-color: #deda7a;
+  color: #645e62;
 }
 
-/* HERO SECTION */
+/* HERO SECTION: h1 color forced to white */
 .about-hero {
   position: relative;
   width: 100%;
@@ -97,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fadeInUp 1.5s ease-out;
+  animation: fadeIn 1.5s ease-out !important;
 }
 .about-hero-overlay {
   background-color: rgba(0, 0, 0, 0.4);
@@ -111,7 +115,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .about-hero-overlay h1 {
-  font-size: 2.5rem;
+  color: #ffffff; /* hero H1 in white */
+  font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 .about-hero-overlay p {
@@ -122,7 +127,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ABOUT INTRO */
 .about-intro {
   padding: 3rem 0;
-  animation: fadeInUp 1.5s ease-out;
 }
 .about-row {
   display: flex;
@@ -178,7 +182,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
-  animation: fadeInUp 1.5s ease-out;
 }
 .stat-box {
   flex: 1 1 calc(25% - 1rem);
@@ -204,7 +207,6 @@ h1, h2, h3, h4, h5, h6 {
 /* VISION & MISSION */
 .vision-mission {
   padding: 2rem 0;
-  animation: fadeInUp 1.5s ease-out;
 }
 .vision-mission h2 {
   text-align: center;
@@ -247,7 +249,6 @@ h1, h2, h3, h4, h5, h6 {
 .benefits-section {
   padding: 3rem 0;
   text-align: center;
-  animation: fadeInUp 1.5s ease-out;
 }
 .benefits-section h2 {
   font-size: 2rem;
@@ -270,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .benefit-box i {
   font-size: 3rem;
-  color: #666;
+  color: #deda7a;
   margin-bottom: 1rem;
 }
 .benefit-box h4 {
@@ -286,24 +287,26 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-top: 2rem;
 }
+/* CTA button here uses your new color request: background #deda7a, text #645e62, hover reversed */
 .btn-appointment {
-  background-color: var(--accent);
-  color: #fff;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s;
+  border: none;
 }
 .btn-appointment:hover {
-  background-color: #3d6547;
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
 /* TESTIMONIALS */
 .testimonials {
   padding: 3rem 0;
   text-align: center;
-  animation: fadeInUp 1.5s ease-out;
 }
 .testimonials h2 {
   font-size: 2rem;
@@ -338,8 +341,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 .testimonial-controls button {
-  background-color: var(--accent);
-  color: #fff;
+  /* Arrows background #deda7a, text #645e62; reversed on hover/click */
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   border: none;
   padding: 0.5rem 1rem;
   margin: 0 0.3rem;
@@ -347,25 +351,38 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: background 0.3s;
 }
-.testimonial-controls button:hover {
-  background-color: #3d6547;
+.testimonial-controls button:hover,
+.testimonial-controls button:active {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
-/* CALL TO ACTION */
+/* CALL TO ACTION SECTION */
 .cta-section {
-  background-color: #0a0a0a;
-  color: #fff;
+  /* Requested background #deda7a, text #645e62 */
+  background-color: #deda7a;
+  color: #645e62;
   padding: 3rem 1rem;
   text-align: center;
-  animation: fadeInUp 1.5s ease-out;
 }
 .cta-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #645e62;
 }
 .cta-content p {
   font-size: 1rem;
   margin-bottom: 2rem;
+  color: #645e62;
+}
+/* CTA button inside this section: background #645e62, text #deda7a; reversed on hover */
+.cta-section .btn-appointment {
+  background-color: #645e62 !important;
+  color: #deda7a !important;
+}
+.cta-section .btn-appointment:hover {
+  background-color: #deda7a !important;
+  color: #645e62 !important;
 }
 
 /* FOOTER */
@@ -401,10 +418,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ANIMATIONS */
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0);
   }
   to {
     opacity: 1;

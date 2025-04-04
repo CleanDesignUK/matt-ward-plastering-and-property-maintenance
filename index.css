@@ -1,25 +1,11 @@
-/*
-  Classy, professional color scheme refined using the main colors #7f797d and #deda7a with updated button styles.
-  - Titles & Subtitles (H1 & H2 outside hero): #7f797d (hero text remains white)
-  - CTA Buttons:
-       • .btn-green: Now, for the hero section, background is set to #deda7a and font color to #645e62;
-         on hover, they swap (background becomes #645e62 with text #deda7a).
-       • .btn-outline-green: Background #deda7a with text #645e62; on hover, swap to background #645e62 with text #deda7a.
-       (Both variants have no border.)
-  - Navbar: White background with navbar text in #7f797d.
-  - Page Background: #f0f3ee.
-  - Footer: Background #f0f3ee.
-  - Final CTA Section: Background #645e62.
-  Additional complementary shades and transitions are added.
-*/
 :root {
   --title-color: #7f797d;
   --subtitle-color: #7f797d;
-  --btn-bg: #645e62;           /* Default button background (for non-hero sections) */
-  --btn-text: #deda7a;         /* Default button text */
-  --btn-hover-bg: #deda7a;      /* On hover, background swaps */
-  --btn-hover-text: #645e62;    /* On hover, text swaps */
-  --footer-bg: #f0f3ee;
+  --btn-bg: #645e62;         
+  --btn-text: #deda7a;       
+  --btn-hover-bg: #deda7a;   
+  --btn-hover-text: #645e62; 
+  --footer-bg: #ffffff;
   --footer-text: #645e62;
   --bg-color: #f0f3ee;
   --navbar-text: #7f797d;
@@ -29,13 +15,10 @@
   --white: #ffffff;
 }
 
-/* Keyframes for fade-in hero effect */
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-/* Keyframes for subtle scale hover */
 @keyframes scaleUp {
   to { transform: scale(1.05); }
 }
@@ -45,7 +28,6 @@ html, body {
   padding: 0;
   overflow-x: hidden;
 }
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
@@ -72,10 +54,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* NAVBAR */
+/* NAVBAR (fixed) */
 .sticky-navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 9999;
   background-color: var(--navbar-bg);
   border-bottom: 1px solid var(--gray);
@@ -119,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* CTA BUTTONS */
-/* For general use (non-hero sections) */
 .btn-green {
   background-color: var(--btn-bg) !important;
   color: var(--btn-text) !important;
@@ -142,25 +124,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--btn-text);
 }
 
-/* Override CTA button in HERO SECTION */
-.hero-section .btn-green {
-  background-color: #deda7a !important;
-  color: #645e62 !important;
-}
-.hero-section .btn-green:hover {
-  background-color: #645e62 !important;
-  color: #deda7a !important;
-}
-
-/* HERO SECTION (hero text remains white) */
+/* HERO SECTION */
+/* ADDED position: relative TO .hero-section */
 .hero-section {
-  position: relative;
+  position: relative; /* ADDED */
   width: 100%;
-  height: 800px;
+  height: 800px !important;
   background: url('hero.jpg') no-repeat center center/cover;
   animation: fadeIn 1.5s ease-out forwards;
 }
+/* ADDED position: absolute, top/left 0 TO .hero-overlay */
 .hero-overlay {
+  position: absolute; /* ADDED */
+  top: 0;             /* ADDED */
+  left: 0;            /* ADDED */
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
@@ -170,35 +147,45 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   text-align: center;
   color: var(--white);
-  padding: 0 1rem;
 }
 .hero-overlay h1,
 .hero-overlay p {
   color: var(--white);
 }
 
-/* CORE SERVICES */
-.core-services {
+/* ABOUT US */
+.about-us-section {
   padding: 3rem 0;
 }
-.core-services h2 {
+.about-us-image img {
+  width: 100%;
+  border-radius: 4px;
+}
+.about-us-text small {
+  font-family: 'Mulish', sans-serif;
+  color: var(--subtitle-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about-us-text h2 {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  color: var(--title-color);
 }
-.core-services .subtitle {
-  margin-bottom: 2rem;
-  text-align: center;
+.about-us-text p {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
 }
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-items: center;
+
+/* CORE SERVICES */
+.core-services {
+  background-color: #1b1b1b;
+  padding: 3rem 0;
 }
 .service-card {
   background-color: #fff;
-  border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -208,62 +195,25 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.02);
 }
 .service-card-img {
-  width: 70%;
-  display: block;
-  margin: 0 auto 1rem auto;
-  height: auto;
+  width: 100%;
   border-radius: 4px;
+  margin-bottom: 1rem;
 }
 .service-card h4 {
+  color: #333;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 .service-card p {
+  color: #333;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-.service-card a {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
 }
 
 /* RECENT PROJECTS */
 .recent-projects {
   padding: 3rem 0;
-  text-align: center;
-}
-.recent-projects h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.recent-projects .subtitle {
-  margin-bottom: 2rem;
-  color: var(--dark);
-}
-.projects-masonry {
-  column-count: 3;
-  column-gap: 1rem;
-  display: block;
-  margin: 0 auto;
-}
-.project-item {
-  display: inline-block; 
-  width: 100%;
-  margin-bottom: 1rem;
-  break-inside: avoid;
-  transition: transform 0.3s ease;
-}
-.project-item:hover {
-  transform: scale(1.02);
-}
-.project-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 /* CERTIFICATIONS & AWARDS */
@@ -315,21 +265,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* REVIEWS SECTION */
 .reviews-section {
-  padding: 3rem 0;
-}
-.reviews-section .d-flex {
-  margin-bottom: 1rem;
+  padding: 3rem 2rem;
+  background-color: #f8f9f3;
 }
 .review-slider {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  position: relative;
-  transition: transform 0.3s ease;
-}
-.review-slider:hover {
-  transform: scale(1.01);
+  display: block; 
 }
 .review-slide {
   display: none;
@@ -338,32 +278,15 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 .review-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--dark);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
   font-style: italic;
   margin-bottom: 1rem;
 }
 .review-author {
   font-weight: 600;
-  color: var(--dark);
-}
-.review-controls {
-  text-align: center;
-  margin-top: 1rem;
-}
-.review-controls button {
-  background-color: #ccc;
-  color: var(--dark);
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.3rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.review-controls button:hover {
-  background-color: #bbb;
+  color: #555;
 }
 
 /* AREAS WE SERVE */
@@ -410,21 +333,44 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--gray);
 }
 
-/* FINAL CTA (Ready to Begin Your Renovation?) */
-.final-cta-section {
-  background-color: #333;
-  color: #f0f3ee;
-  text-align: center;
-  padding: 3rem 1rem;
+/* New Split Section */
+.split-cta-section {
+  margin-bottom: 3rem;
 }
-.final-cta-content h2 {
+.split-cta-section .split-cta-box {
+  background-color: #645e62;
+  min-height: 350px;
+  position: relative;
+  color: var(--btn-text);
+}
+.split-cta-section .content-wrapper {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.split-cta-section .cta-label {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--bg-color);
+}
+.split-cta-section .cta-heading {
   font-size: 2rem;
-  color: #f0f3ee;
   margin-bottom: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--gray);
 }
-.final-cta-content p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
+.split-cta-section .btn-green {
+  margin-top: 1rem;
+  background-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-text) !important;
+  border: none !important;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+.split-cta-section .btn-green:hover {
+  background-color: var(--btn-bg) !important;
+  color: var(--btn-text) !important;
 }
 
 /* FOOTER */
@@ -460,13 +406,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*====================================
-    RESPONSIVE MEDIA QUERIES
+  RESPONSIVE MEDIA QUERIES
 ====================================*/
-
-/* Core Services, Certifications: 1 column on small screens */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+  .core-services .col-md-3 {
+    width: 100%;
+  }
+  .core-services .row {
+    display: block;
   }
   .certs-awards-grid {
     grid-template-columns: 1fr;
@@ -475,28 +422,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     max-width: none;
   }
-}
-
-/* Mosaic Projects: 2 columns on medium screens, 1 column on small screens */
-@media (max-width: 992px) {
-  .projects-masonry {
-    column-count: 2;
+  .review-slide .row {
+    display: block;
   }
-}
-@media (max-width: 576px) {
-  .projects-masonry {
-    column-count: 1;
+  .review-slide .col-md-6 {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
-/* FAQ Accordion: adjust padding on smaller screens */
-@media (max-width: 768px) {
-  .accordion-box {
-    padding: 0.5rem;
-  }
-}
-
-/* Adjust hero for smaller screens */
 @media (max-width: 576px) {
   .hero-section {
     height: 300px;
@@ -506,5 +440,64 @@ h1, h2, h3, h4, h5, h6 {
   }
   .hero-overlay p {
     font-size: 1rem;
+  }
+  /* Adjust padding for About Us section */
+  .about-us-section {
+    padding: 2rem 0;
+  }
+  /* Improve CTA button appearance */
+  .btn-green {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  /* Stack CTA buttons vertically in designated containers */
+  .cta-buttons {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+  /* Reduce padding for Our Services section */
+  .core-services {
+    padding: 2rem 0;
+  }
+  /* Reduce padding for Gallery section */
+  .recent-projects {
+    padding: 2rem 0;
+  }
+  /* Reduce padding for Certifications & Awards section */
+  .certs-awards {
+    padding: 2rem 0;
+  }
+  /* Adjust padding for Reviews section */
+  .reviews-section {
+    padding: 2rem 1rem;
+  }
+  /* Adjust padding for Areas We Serve section */
+  .areas-served {
+    padding: 2rem 0;
+  }
+  .areas-box {
+    padding: 2rem;
+  }
+  /* Reduce testimonial container min-height */
+  .review-slide .col-md-6 > div {
+    min-height: 250px !important;
+  }
+  /* Adjust inner testimonial margins */
+  .review-slide div[style*="margin: 2rem"] {
+    margin: 1rem !important;
+    width: 90% !important;
+    padding: 0.5rem !important;
+  }
+  /* Add extra margin and padding on sides and top for all sections */
+  section {
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  /* Add extra top padding to the body for small screens */
+  body {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

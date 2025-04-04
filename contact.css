@@ -1,137 +1,251 @@
-/* Color Palette */
+/*
+  EXACT same style rules as your About page:
+  Navbar, hero (about-hero), and footer copied verbatim.
+*/
+
+/* Variables */
 :root {
-    --accent: #4a7b56; /* subtle accent */
-    --gray: #f2f2f2;
-    --dark: #333;
-    --white: #ffffff;
+  --title-color: #7f797d;
+  --subtitle-color: #7f797d;
+
+  /* The colors for the main CTA buttons and arrows */
+  --btn-bg: #deda7a;
+  --btn-text: #645e62;
+  --btn-hover-bg: #645e62;
+  --btn-hover-text: #deda7a;
+
+  --footer-bg: #ffffff;
+  --footer-text: #645e62;
+  --bg-color: #f0f3ee;
+  --navbar-text: #7f797d;
+  --navbar-bg: #ffffff;
+  --gray: #f2f2f2;
+  --dark: #333;
+  --white: #ffffff;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--bg-color) !important;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--dark);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--title-color);
+}
+.subtitle {
+  font-family: 'Mulish', sans-serif;
+  color: var(--subtitle-color);
+}
+
+/* NAVBAR (identical to About page) */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--gray);
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  height: 80px;
+  object-fit: contain;
+}
+.company-name {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--title-color);
+}
+@media (max-width: 576px) {
+  .company-name {
+    display: none;
   }
-  
-  /* Fonts */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Josefin Sans', sans-serif;
+}
+.navbar-nav .nav-link,
+.navbar-toggler-icon {
+  color: var(--navbar-text) !important;
+}
+.nav-link.active,
+.nav-link:hover {
+  text-decoration: underline;
+}
+.btn-contact {
+  background-color: #645e62;
+  color: #deda7a;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-contact:hover {
+  background-color: #deda7a;
+  color: #645e62;
+}
+
+/* HERO SECTION (identical to About page) */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background: url('contact-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+.about-hero-overlay h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.about-hero-overlay p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.btn-hero-cta {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+  border: none;
+}
+.btn-hero-cta:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+/* FOOTER (identical to About page) */
+.footer-dark {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 3rem 1rem;
+}
+.footer-dark a {
+  color: var(--footer-text);
+  text-decoration: none;
+}
+.footer-dark a:hover {
+  text-decoration: underline;
+}
+.newsletter-form input {
+  border: none;
+  padding: 0.5rem;
+  width: 70%;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+.newsletter-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--dark);
+  color: var(--white);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.newsletter-form button:hover {
+  opacity: 0.8;
+}
+
+/* SAME FADE-IN KEYFRAMES FROM ABOUT PAGE */
+@keyframes fadeInEaseOutForward {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .subtitle {
-    font-family: 'Mulish', sans-serif;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  body {
-    font-family: 'Inter', sans-serif;
-    color: var(--dark);
-    background-color: var(--white);
-    margin: 0;
-    padding: 0;
+}
+
+/* FIX MARGIN/PADDING AND WHITE SPACE:
+   Remove extra padding from container elements */
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* MEDIA QUERIES (matching About page) */
+@media (max-width: 768px) {
+  .company-name {
+    display: none;
   }
-  
-  /* NAVBAR */
-  .navbar {
-    background-color: var(--white);
-    border-bottom: 1px solid var(--gray);
+  .about-hero {
+    height: 300px;
   }
-  .navbar-brand img {
-    height: 40px;
-    object-fit: contain;
+  .about-hero-overlay h1 {
+    font-size: 2.2rem;
   }
-  .navbar-nav .nav-link,
-  .navbar-toggler-icon {
-    color: var(--dark) !important;
+  .about-hero-overlay p {
+    font-size: 1rem;
   }
-  .nav-link.active,
-  .nav-link:hover {
-    text-decoration: underline;
+}
+@media (max-width: 576px) {
+  .about-hero-overlay h1 {
+    font-size: 1.8rem;
   }
-  .btn-contact {
-    background-color: var(--white);
-    color: var(--accent);
-    border: 2px solid var(--accent);
-    transition: all 0.3s ease;
+  .about-hero-overlay p {
+    font-size: 0.95rem;
   }
-  .btn-contact:hover {
-    background-color: var(--accent);
-    color: var(--white);
-    border: 2px solid var(--accent);
+}
+
+/* ====== ADDED SPACING BETWEEN MAIN CONTENT, NAVBAR, AND FOOTER ====== */
+.contact-hero {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.faq-section {
+  margin-bottom: 2rem;
+}
+
+/* ====== MAKE THE EMBEDDED GOOGLE MAPS SQUARE ====== */
+.map-container {
+  /* Forces a 1:1 aspect ratio while remaining responsive */
+  aspect-ratio: 1 / 1;
+  max-width: 600px; /* Adjust as needed */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
   }
-  
-  /* HERO SECTION with Overlay Image */
-  .hero-section {
-    position: relative;
-    height: 800px; /* Adjust height as needed */
-    background: url('contact-hero.jpg') no-repeat center center/cover;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-align: center;
-    padding: 0 1rem;
-  }
-  .hero-overlay h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  .hero-overlay h2 {
-    font-size: 1.25rem;
-    font-family: 'Mulish', sans-serif;
-  }
-  
-  /* CONTACT HERO */
-  .contact-hero {
-    padding: 3rem 0;
-  }
-  .map-container {
-    height: 450px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  
-  /* FAQ SECTION */
-  .faq-section {
-    background-color: var(--gray);
-    padding: 3rem 1rem;
-  }
-  .faq-section h2 {
-    margin-bottom: 2rem;
-  }
-  
-  /* FOOTER */
-  .footer-dark {
-    background-color: #cccccc; /* Grey background */
-    color: var(--dark);
-    padding: 3rem 1rem;
-  }
-  .footer-dark a {
-    color: var(--dark);
-    text-decoration: none;
-  }
-  .footer-dark a:hover {
-    text-decoration: underline;
-  }
-  .newsletter-form input {
-    border: none;
-    padding: 0.5rem;
-    width: 70%;
-    margin-right: 0.5rem;
-    border-radius: 4px;
-  }
-  .newsletter-form button {
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: var(--dark);
-    color: var(--white);
-    border-radius: 4px;
-    transition: all 0.3s;
-  }
-  .newsletter-form button:hover {
-    opacity: 0.8;
-  }
-  
+}

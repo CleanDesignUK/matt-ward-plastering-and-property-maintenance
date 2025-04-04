@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home | Matt Ward Plastering &amp; Property Maintenance</title>
   
+  <!-- Favicon -->
+  <link rel="icon" href="/mw-logo-icon.png" type="image/jpeg">
+  
   <!-- SEO Meta -->
-  <meta name="description" content="Matt Ward Plastering & Property Maintenance – expert plasterers near me, painter and decorator near me, painting and decorating, tilers near me, property maintenance. Based in Beaumaris, proudly serving Anglesey, Gwynedd and surrounding areas for over 30 years.">
-  <meta name="keywords" content="plasterers near me, painter and decorator near me, painting and decorating, tilers near me, property maintenance">
+  <meta name="description" content="Matt Ward Plastering & Property Maintenance offers expert plastering, painting and decorating, tiling, and property maintenance services. Based in Beaumaris, serving Anglesey, Gwynedd and surrounding areas for over 30 years." />
+  <meta name="keywords" content="plasterers near me, painter and decorator near me, painting and decorating, tilers near me, property maintenance" />
   
   <!-- Google Fonts -->
   <!-- Title: Josefin Sans -->
@@ -41,9 +44,10 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <!-- NAVBAR (sticky) -->
+  <!-- NAVBAR (fixed/sticky) -->
+  <!-- CHANGED .container TO .container-fluid BELOW -->
   <nav class="navbar navbar-expand-lg sticky-navbar">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <img src="matt-ward-ppm-logo.png" alt="Matt Ward Logo">
         <span class="company-name ms-2">Matt Ward Plastering &amp; Property Maintenance</span>
@@ -58,79 +62,146 @@
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item ms-3">
-            <a href="contact.html" class="btn btn-contact">Contact Us</a>
+            <a href="contact.html" class="btn btn-contact">Get In Touch</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION (Hero text remains white) -->
+  <!-- HERO SECTION -->
   <section class="hero-section">
+    <!-- This overlay now absolutely covers the hero section (see CSS) -->
     <div class="hero-overlay">
       <div class="container text-center">
         <h1>Transform Your Space with Expert Craftsmanship</h1>
         <p>Based in Beaumaris – Proudly serving Anglesey, Gwynedd and surrounding areas for over 30 years.</p>
-        <a href="contact.html" class="btn btn-green mt-3">Transform Your Home Today</a>
+        <a href="contact.html" class="btn btn-green mt-3">Get Your Free Quote Now</a>
       </div>
     </div>
   </section>
 
-  <!-- CORE SERVICES -->
-  <section class="core-services container">
-    <h2 class="text-center">Our Core Services</h2>
-    <p class="text-center subtitle">Expert plastering, painting &amp; decorating, tiling, and comprehensive property maintenance.</p>
-    <div class="services-grid">
-      <!-- Service 1 -->
-      <div class="service-card">
-        <img src="plastering.jpg" alt="Plastering Service" class="service-card-img">
-        <h4>Plastering</h4>
-        <p>Our expert plasterers deliver smooth, durable finishes for walls and ceilings. Trust our experienced team for flawless results.</p>
-        <a href="services.html" class="btn btn-outline-green">Discover Expert Plastering</a>
+  <!-- ABOUT US SECTION -->
+  <section class="about-us-section container">
+    <div class="row align-items-center">
+      <div class="col-md-6 about-us-image">
+        <img src="about-home.jpg" alt="Modern Renovation" class="img-fluid" />
       </div>
-      <!-- Service 2 -->
-      <div class="service-card">
-        <img src="painting-decorating.jpg" alt="Painting &amp; Decorating Service" class="service-card-img">
-        <h4>Painting &amp; Decorating</h4>
-        <p>Enhance your space with premium painting and decorating services. Experience vibrant, long-lasting finishes that impress.</p>
-        <a href="services.html" class="btn btn-outline-green">Transform with Premium Painting</a>
-      </div>
-      <!-- Service 3 -->
-      <div class="service-card">
-        <img src="tiling.jpg" alt="Tiling Service" class="service-card-img">
-        <h4>Tiling</h4>
-        <p>Upgrade your surfaces with precision tiling. Our skilled tilers ensure your floors and walls look stunning and last longer.</p>
-        <a href="services.html" class="btn btn-outline-green">Upgrade with Precision Tiling</a>
-      </div>
-      <!-- Service 4 -->
-      <div class="service-card">
-        <img src="property-maintenance.jpg" alt="Property Maintenance" class="service-card-img">
-        <h4>Property Maintenance</h4>
-        <p>Keep your property in pristine condition with our comprehensive maintenance services. We handle every detail of upkeep.</p>
-        <a href="services.html" class="btn btn-outline-green">Secure Reliable Maintenance</a>
+      <div class="col-md-6 about-us-text">
+        <small>— ABOUT US</small>
+        <h2 class="mt-2">Expert Plastering, Painting &amp; Tiling for Your Home</h2>
+        <p class="mt-3">
+          At Matt Ward Plastering & Property Maintenance, our skilled team specializes in premium plastering, painting and decorating, and tiling services. We combine modern techniques with traditional craftsmanship to deliver outstanding results. Whether you're searching for "plasterers near me" or a "painter and decorator near me," our reputation for excellence speaks for itself.
+        </p>
+        <div class="mt-4 d-flex gap-3 cta-buttons">
+          <a href="contact.html" class="btn btn-green">Request Your Free Estimate</a>
+          <a href="about.html" class="btn btn-outline-green">Discover Our Expertise</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- RECENT PROJECTS -->
-  <section class="recent-projects container">
-    <h2 class="text-center">Recent Projects</h2>
-    <p class="subtitle text-center">Explore our latest work that reflects our commitment to quality and precision.</p>
-    <div class="projects-masonry">
-      <div class="project-item"><img src="property-project.jpg" alt="Project 1"></div>
-      <div class="project-item"><img src="roof-project.jpg" alt="Project 2"></div>
-      <div class="project-item"><img src="tiling-project-2.jpg" alt="Project 3"></div>
-      <div class="project-item"><img src="window-project-2.jpg" alt="Project 4"></div>
-      <div class="project-item"><img src="window-project.jpg" alt="Project 5"></div>
-      <div class="project-item"><img src="tiling-project.jpg" alt="Project 6"></div>
-    </div>
-    <div class="mt-3 d-flex gap-3 justify-content-center">
-      <a href="services.html" class="btn btn-outline-green">Explore Our Project Gallery</a>
-      <a href="contact.html" class="btn btn-green">Schedule Your Free Consultation</a>
+  <!-- CORE SERVICES SECTION -->
+  <section class="core-services" style="background-color: #1b1b1b; padding: 3rem 0;">
+    <div class="container">
+      <small style="color: #fff; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.5rem;">
+        — OUR SERVICES
+      </small>
+      <h2 style="color: #fff; font-size: 2rem; margin-bottom: 1rem;">
+        Comprehensive Home Improvement Solutions
+      </h2>
+      <p style="color: #fff; max-width: 600px;">
+        Our extensive service offering ensures that whether you need expert plastering, professional painting and decorating, precision tiling, or thorough property maintenance, our experienced team is here to deliver superior results. We are committed to quality workmanship and exceptional customer service.
+      </p>
+
+      <div class="row mt-4">
+        <div class="col-md-3 mb-4">
+          <div class="service-card text-center p-3 rounded shadow-sm h-100 d-flex flex-column justify-content-between" style="background-color: #fff;">
+            <img src="plastering.jpg" alt="Plastering Service" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
+            <h4 style="color: #333;">Plastering</h4>
+            <p style="color: #333;">
+              Looking for reliable plasterers near me? Our expert team delivers smooth, durable finishes for walls and ceilings using the latest techniques.
+            </p>
+            <a href="services.html" class="btn btn-outline-green mt-3">View Plastering Solutions</a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="service-card text-center p-3 rounded shadow-sm h-100 d-flex flex-column justify-content-between" style="background-color: #fff;">
+            <img src="painting-decorating.jpg" alt="Painting &amp; Decorating Service" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
+            <h4 style="color: #333;">Painting &amp; Decorating</h4>
+            <p style="color: #333;">
+              Searching for a painter and decorator near me? Our professionals transform your space with meticulous painting and decorating services for a vibrant finish.
+            </p>
+            <a href="services.html" class="btn btn-outline-green mt-3">Explore Painting Services</a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="service-card text-center p-3 rounded shadow-sm h-100 d-flex flex-column justify-content-between" style="background-color: #fff;">
+            <img src="tiling.jpg" alt="Tiling Service" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
+            <h4 style="color: #333;">Tiling</h4>
+            <p style="color: #333;">
+              Need tilers near me? Our experienced tilers provide precision tiling services that upgrade your floors and walls with stunning, lasting results.
+            </p>
+            <a href="services.html" class="btn btn-outline-green mt-3">See Our Tiling Work</a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="service-card text-center p-3 rounded shadow-sm h-100 d-flex flex-column justify-content-between" style="background-color: #fff;">
+            <img src="property-maintenance.jpg" alt="Property Maintenance" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
+            <h4 style="color: #333;">Property Maintenance</h4>
+            <p style="color: #333;">
+              Looking for property maintenance near me? Our comprehensive upkeep services ensure your home stays in top condition, inside and out.
+            </p>
+            <a href="services.html" class="btn btn-outline-green mt-3">Learn More About Maintenance</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 d-flex gap-3 cta-buttons">
+        <a href="contact.html" style="background-color: #fff; color: #000; border: none; padding: 0.7rem 1.2rem; font-weight: 500; border-radius: 4px; text-decoration: none;">
+          Request Your Free Estimate
+        </a>
+        <a href="services.html" style="background-color: #fff; color: #000; border: none; padding: 0.7rem 1.2rem; font-weight: 500; border-radius: 4px; text-decoration: none;">
+          Explore Our Services
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS & AWARDS -->
+  <!-- RECENT PROJECTS SECTION -->
+  <section class="recent-projects container" style="padding: 3rem 0;">
+    <div class="row align-items-start">
+      <!-- LEFT COLUMN: TEXT, FIRST IMAGE, SECOND PARAGRAPH, BUTTONS -->
+      <div class="col-md-6">
+        <small style="color: #7f797d; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.5rem;">
+          — GALLERY
+        </small>
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">
+          Our Recent Home Transformations
+        </h2>
+        <p style="max-width: 600px; color: #333;">
+          Explore our portfolio of high-quality projects that showcase our expertise in plastering, painting and decorating, and tiling. Our work reflects our commitment to excellence and attention to detail.
+        </p>
+        <!-- FIRST IMAGE PLACED AFTER THE FIRST PARAGRAPH -->
+        <img src="property-project.jpg" alt="Completed Project" style="width: 100%; border-radius: 4px; margin-bottom: 1rem;" />
+        <img src="tiling-project.jpg" alt="Completed Project" style="width: 100%; border-radius: 4px; margin-bottom: 1rem;" />
+        <p style="max-width: 600px; color: #333;">
+          From modern renovations to traditional restorations, our projects are designed to enhance the beauty and functionality of your home. Trust our local plasterers and painters to deliver superior craftsmanship.
+        </p>
+        <div class="mt-4 d-flex gap-3 cta-buttons">
+          <a href="contact.html" class="btn btn-green" style="text-transform: none;">Schedule Your Free Consultation</a>
+          <a href="portfolio.html" class="btn btn-outline-green" style="text-transform: none;">View Our Project Gallery</a>
+        </div>
+      </div>
+      <!-- RIGHT COLUMN: SECOND & THIRD IMAGES STACKED -->
+      <div class="col-md-6">
+        <img src="roof-project.jpg" alt="Roof Project" style="width: 100%; border-radius: 4px; margin-bottom: 1rem; margin-top: 1rem;" />
+        <img src="window-project.jpg" alt="Tiling Project" style="width: 100%; border-radius: 4px;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & AWARDS SECTION -->
   <section class="certs-awards container text-center">
     <h2>Certifications &amp; Awards</h2>
     <p class="subtitle">Our credentials reflect our dedication to quality and industry excellence.</p>
@@ -148,45 +219,186 @@
     </div>
   </section>
 
-  <!-- REVIEWS SECTION (Bento Box Slider with CTA next to heading) -->
-  <section class="reviews-section container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="mb-0">What Our Clients Say</h2>
-      <a href="contact.html" class="btn btn-green">Get Your Free Consultation</a>
-    </div>
-    <div class="review-slider">
-      <div class="review-slide active">
-        <blockquote class="review-text">
-          “We found Matt after reading some great reviews on Facebook. He came and quoted for plastering a bedroom ceiling and was very accommodating to fit us in very quickly. We are very happy with the finish.”
-        </blockquote>
-        <p class="review-author">– David Clunas</p>
+  <!-- REVIEWS SECTION -->
+  <section class="reviews-section" style="padding: 3rem 2rem; background-color: #f8f9f3;">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 style="font-size: 2rem; margin: 0; color: #333;">What Our Customers Say</h2>
+        <div>
+          <!-- Arrows for scrolling through slides -->
+          <button class="prev-btn" 
+                  style="border: none; background: transparent; font-size: 1.5rem; margin-right: 1rem; cursor: pointer;">
+            ←
+          </button>
+          <button class="next-btn" 
+                  style="border: none; background: transparent; font-size: 1.5rem; cursor: pointer;">
+            →
+          </button>
+        </div>
       </div>
-      <div class="review-slide">
-        <blockquote class="review-text">
-          “Came quickly to provide an estimate and were able to start work soon after. The work was carried out efficiently, and the internal lime render was applied to a high standard with an excellent finish. Overall, excellent service.”
-        </blockquote>
-        <p class="review-author">– James Vousden</p>
+      <!-- 6 slides, each with 2 columns (except the last with 1) -->
+      <div class="review-slider">
+        <!-- Slide 1 -->
+        <div class="review-slide active">
+          <div class="row g-4">
+            <!-- Peter -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-1.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “Excellent quality of work, and always there to help when needed. Highly recommended.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Peter</p>
+                </div>
+              </div>
+            </div>
+            <!-- Mark Bailey -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-2.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “I used Matt to fix and secure a leaking drain pipe and gutter in my yard. He was there the same day, fixed it, very affordable… and left no mess… thanks Matt!”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Mark Bailey</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="review-slide">
+          <div class="row g-4">
+            <!-- Russell Brown -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-3.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “Matt came highly recommended to us. We needed an external door removed and the gap rebuilt. Insulation, plaster board, and rendering were completed to a very high standard.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Russell Brown</p>
+                </div>
+              </div>
+            </div>
+            <!-- Rob Morris -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-4.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “Had lots of work done on my house. Very clean and professional. Matt is not only skilled but also a genuinely nice person. Highly recommend.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Rob Morris</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="review-slide">
+          <div class="row g-4">
+            <!-- Julian Wood -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-5.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “Traditional skills meet modern standards. Matt’s apprenticeship and expertise shine through in every project.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Julian Wood</p>
+                </div>
+              </div>
+            </div>
+            <!-- Geraint Evans -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-6.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “I use Matt for all types of home repairs – his work in plastering and property maintenance is outstanding.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Geraint Evans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="review-slide">
+          <div class="row g-4">
+            <!-- David Owen -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-7.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “The ultimate professional. Can turn his hand to anything, always leaves the job tidy, turns up on time, and gives it 100%.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– David Owen</p>
+                </div>
+              </div>
+            </div>
+            <!-- Emma Evans -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-8.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “Professional, detailed and efficient – Matt’s workmanship is second to none.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Emma Evans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="review-slide">
+          <div class="row g-4">
+            <!-- David Clunas -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-9.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “After reading excellent reviews, I chose Matt for my plastering project. His work was prompt, professional, and flawless.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– David Clunas</p>
+                </div>
+              </div>
+            </div>
+            <!-- Wendy Hughes -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-10.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “I highly recommend Matt and his team – they converted our attic flawlessly while keeping the work area spotless.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– Wendy Hughes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 6 -->
+        <div class="review-slide">
+          <div class="row g-4">
+            <!-- James Vousden -->
+            <div class="col-md-6">
+              <div style="background: url('testimonial-11.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                    “Quick, efficient and tidy – Matt provided an excellent internal lime render with minimal disruption.”
+                  </blockquote>
+                  <p class="review-author" style="font-weight: 600; color: #555;">– James Vousden</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block"></div>
+          </div>
+        </div>
       </div>
-      <div class="review-slide">
-        <blockquote class="review-text">
-          “I can highly recommend Matt and his team. They converted our attic into two bedrooms and a shower room. The work was completed swiftly, the site left spotless, and they were very friendly to all our cats.”
-        </blockquote>
-        <p class="review-author">– Wendy Hughes</p>
+      <!-- "Get a Quote" button at bottom -->
+      <div class="mt-4">
+        <a href="contact.html" class="btn btn-green" style="text-transform: none;">Speak with a Local Expert Today</a>
       </div>
-      <div class="review-slide">
-        <blockquote class="review-text">
-          “Matt Ward Plastering exceeded our expectations. Their professionalism and attention to detail made our renovation project a smooth experience.”
-        </blockquote>
-        <p class="review-author">– Rebecca Smith</p>
-      </div>
-    </div>
-    <div class="review-controls mt-3">
-      <button class="prev-btn">&lt;</button>
-      <button class="next-btn">&gt;</button>
     </div>
   </section>
 
-  <!-- AREAS WE SERVE (Dark Grey Bento Box) -->
+  <!-- AREAS WE SERVE SECTION -->
   <section class="areas-served container">
     <div class="areas-box">
       <h2 class="text-center">Areas We Serve</h2>
@@ -211,14 +423,14 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION (Accordion) -->
+  <!-- FAQ SECTION -->
   <section class="faq-section container">
     <h2 class="text-center">Frequently Asked Questions</h2>
     <div class="accordion accordion-box" id="faqAccordion">
       <div class="accordion-item">
         <h2 class="accordion-header" id="faqHeadingOne">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-            What services does Matt Ward Plastering &amp; Property Maintenance offer?
+            What services do you offer as top plasterers near me?
           </button>
         </h2>
         <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
@@ -235,7 +447,7 @@
         </h2>
         <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Yes, our team holds NVQ Level 3 qualifications and we have been recognized with LABC Building Excellence awards. We are fully insured.
+            Yes, our team holds NVQ Level 3 qualifications and has received LABC Building Excellence awards. We are fully insured.
           </div>
         </div>
       </div>
@@ -271,19 +483,36 @@
         </h2>
         <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            We serve a wide range of areas in Anglesey and Gwynedd – including Beaumaris, Holyhead, Menai Bridge, Llangefni, and many more. We also offer emergency repair services for urgent needs.
+            We serve a wide range of areas in Anglesey and Gwynedd – including Beaumaris, Holyhead, Menai Bridge, Llangefni, and more. We also offer emergency repair services for urgent needs.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA (Ready to Begin Your Renovation?) -->
-  <section class="final-cta-section">
-    <div class="final-cta-content">
-      <h2>Ready to Begin Your Renovation?</h2>
-      <p>Contact us today for a free expert quote and discover the difference in professional craftsmanship.</p>
-      <a href="contact.html" class="btn btn-green">Claim Your Free Expert Quote Now</a>
+  <!-- SPLIT CTA SECTION -->
+  <section class="split-cta-section container-fluid">
+    <div class="row g-0">
+      <!-- Left Image -->
+      <div class="col-md-6">
+        <img
+          src="testimonial-9.jpg"
+          alt="Contact Section"
+          class="img-fluid w-100"
+          style="object-fit: cover; height: 100%;"
+        />
+      </div>
+      <!-- Right CTA Box -->
+      <div class="col-md-6 split-cta-box d-flex flex-column justify-content-center">
+        <div class="content-wrapper text-center text-md-start px-4 px-md-5">
+          <span class="cta-label mb-2 d-block">CONTACT US</span>
+          <h2 class="cta-heading">Ready to Work Together?</h2>
+          <p>
+            Looking for reliable "plasterers near me" or a professional "painter and decorator near me"? Our experienced team is here to help with everything from plastering and painting to tiling and property maintenance. Get in touch today!
+          </p>
+          <a href="contact.html" class="btn btn-green">Speak with a Local Expert Today &raquo;</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -346,12 +575,17 @@
     const reviewPrev = document.querySelector('.prev-btn');
     const reviewNext = document.querySelector('.next-btn');
     let reviewIndex = 0;
+
     function showReview(index) {
       reviewSlides.forEach((slide, i) => {
         slide.classList.remove('active');
         if (i === index) slide.classList.add('active');
       });
     }
+
+    // Show the first slide by default
+    showReview(reviewIndex);
+
     reviewPrev.addEventListener('click', () => {
       reviewIndex = (reviewIndex - 1 + reviewSlides.length) % reviewSlides.length;
       showReview(reviewIndex);
