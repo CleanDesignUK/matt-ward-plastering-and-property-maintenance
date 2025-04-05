@@ -6,7 +6,7 @@
   <title>Home | Matt Ward Plastering &amp; Property Maintenance</title>
   
   <!-- Favicon -->
-  <link rel="icon" href="/mw-logo-icon.png" type="image/jpeg">
+  <link rel="icon" href="mw-logo-icon.png" type="image/jpeg">
   
   <!-- SEO Meta -->
   <meta name="description" content="Matt Ward Plastering & Property Maintenance offers expert plastering, painting and decorating, tiling, and property maintenance services. Based in Beaumaris, serving Anglesey, Gwynedd and surrounding areas for over 30 years." />
@@ -44,25 +44,39 @@
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-  <!-- NAVBAR (fixed/sticky) -->
-  <!-- CHANGED .container TO .container-fluid BELOW -->
+  <!--======================
+      NAVBAR (using container so there is side padding on larger screens)
+  ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="matt-ward-ppm-logo.png" alt="Matt Ward Logo">
+        <img src="matt-ward-ppm-logo.png" alt="Matt Ward Logo" />
         <span class="company-name ms-2">Matt Ward Plastering &amp; Property Maintenance</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
           <li class="nav-item ms-3">
-            <a href="contact.html" class="btn btn-contact">Get In Touch</a>
+            <a href="contact.html" class="btn btn-contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -71,8 +85,9 @@
 
   <!-- HERO SECTION -->
   <section class="hero-section">
-    <!-- This overlay now absolutely covers the hero section (see CSS) -->
+    <!-- The hero-overlay absolutely covers the hero section -->
     <div class="hero-overlay">
+      <!-- Removed extra container padding by overriding it in CSS -->
       <div class="container text-center">
         <h1>Transform Your Space with Expert Craftsmanship</h1>
         <p>Based in Beaumaris – Proudly serving Anglesey, Gwynedd and surrounding areas for over 30 years.</p>
@@ -91,7 +106,7 @@
         <small>— ABOUT US</small>
         <h2 class="mt-2">Expert Plastering, Painting &amp; Tiling for Your Home</h2>
         <p class="mt-3">
-          At Matt Ward Plastering & Property Maintenance, our skilled team specializes in premium plastering, painting and decorating, and tiling services. We combine modern techniques with traditional craftsmanship to deliver outstanding results. Whether you're searching for "plasterers near me" or a "painter and decorator near me," our reputation for excellence speaks for itself.
+          At Matt Ward Plastering & Property Maintenance, our skilled team specializes in premium plastering, painting and decorating, and tiling services. We combine modern techniques with traditional craftsmanship to deliver outstanding results. Whether you're searching for "plasterers nearby" or a "painter and decorator nearby," our reputation for excellence speaks for itself.
         </p>
         <div class="mt-4 d-flex gap-3 cta-buttons">
           <a href="contact.html" class="btn btn-green">Request Your Free Estimate</a>
@@ -120,7 +135,7 @@
             <img src="plastering.jpg" alt="Plastering Service" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
             <h4 style="color: #333;">Plastering</h4>
             <p style="color: #333;">
-              Looking for reliable plasterers near me? Our expert team delivers smooth, durable finishes for walls and ceilings using the latest techniques.
+              Looking for reliable local plasterers? Our expert team delivers smooth, durable finishes for walls and ceilings using the latest techniques.
             </p>
             <a href="services.html" class="btn btn-outline-green mt-3">View Plastering Solutions</a>
           </div>
@@ -130,7 +145,7 @@
             <img src="painting-decorating.jpg" alt="Painting &amp; Decorating Service" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
             <h4 style="color: #333;">Painting &amp; Decorating</h4>
             <p style="color: #333;">
-              Searching for a painter and decorator near me? Our professionals transform your space with meticulous painting and decorating services for a vibrant finish.
+              Searching for a local painter and decorator? Our professionals transform your space with meticulous painting and decorating services for a vibrant finish.
             </p>
             <a href="services.html" class="btn btn-outline-green mt-3">Explore Painting Services</a>
           </div>
@@ -140,7 +155,7 @@
             <img src="tiling.jpg" alt="Tiling Service" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
             <h4 style="color: #333;">Tiling</h4>
             <p style="color: #333;">
-              Need tilers near me? Our experienced tilers provide precision tiling services that upgrade your floors and walls with stunning, lasting results.
+              Need local tilers? Our experienced tilers provide precision tiling services that upgrade your floors and walls with stunning, lasting results.
             </p>
             <a href="services.html" class="btn btn-outline-green mt-3">See Our Tiling Work</a>
           </div>
@@ -150,7 +165,7 @@
             <img src="property-maintenance.jpg" alt="Property Maintenance" class="service-card-img mb-3" style="width: 100%; border-radius: 4px;" />
             <h4 style="color: #333;">Property Maintenance</h4>
             <p style="color: #333;">
-              Looking for property maintenance near me? Our comprehensive upkeep services ensure your home stays in top condition, inside and out.
+              Looking for local property maintenance services? Our comprehensive upkeep services ensure your home stays in top condition, inside and out.
             </p>
             <a href="services.html" class="btn btn-outline-green mt-3">Learn More About Maintenance</a>
           </div>
@@ -171,7 +186,6 @@
   <!-- RECENT PROJECTS SECTION -->
   <section class="recent-projects container" style="padding: 3rem 0;">
     <div class="row align-items-start">
-      <!-- LEFT COLUMN: TEXT, FIRST IMAGE, SECOND PARAGRAPH, BUTTONS -->
       <div class="col-md-6">
         <small style="color: #7f797d; text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.5rem;">
           — GALLERY
@@ -182,7 +196,6 @@
         <p style="max-width: 600px; color: #333;">
           Explore our portfolio of high-quality projects that showcase our expertise in plastering, painting and decorating, and tiling. Our work reflects our commitment to excellence and attention to detail.
         </p>
-        <!-- FIRST IMAGE PLACED AFTER THE FIRST PARAGRAPH -->
         <img src="property-project.jpg" alt="Completed Project" style="width: 100%; border-radius: 4px; margin-bottom: 1rem;" />
         <img src="tiling-project.jpg" alt="Completed Project" style="width: 100%; border-radius: 4px; margin-bottom: 1rem;" />
         <p style="max-width: 600px; color: #333;">
@@ -193,7 +206,6 @@
           <a href="portfolio.html" class="btn btn-outline-green" style="text-transform: none;">View Our Project Gallery</a>
         </div>
       </div>
-      <!-- RIGHT COLUMN: SECOND & THIRD IMAGES STACKED -->
       <div class="col-md-6">
         <img src="roof-project.jpg" alt="Roof Project" style="width: 100%; border-radius: 4px; margin-bottom: 1rem; margin-top: 1rem;" />
         <img src="window-project.jpg" alt="Tiling Project" style="width: 100%; border-radius: 4px;" />
@@ -222,10 +234,10 @@
   <!-- REVIEWS SECTION -->
   <section class="reviews-section" style="padding: 3rem 2rem; background-color: #f8f9f3;">
     <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 style="font-size: 2rem; margin: 0; color: #333;">What Our Customers Say</h2>
+      <!-- Center heading and place arrows beneath for better look -->
+      <div class="text-center mb-4">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333;">What Our Customers Say</h2>
         <div>
-          <!-- Arrows for scrolling through slides -->
           <button class="prev-btn" 
                   style="border: none; background: transparent; font-size: 1.5rem; margin-right: 1rem; cursor: pointer;">
             ←
@@ -236,12 +248,10 @@
           </button>
         </div>
       </div>
-      <!-- 6 slides, each with 2 columns (except the last with 1) -->
       <div class="review-slider">
         <!-- Slide 1 -->
         <div class="review-slide active">
           <div class="row g-4">
-            <!-- Peter -->
             <div class="col-md-6">
               <div style="background: url('testimonial-1.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -252,7 +262,6 @@
                 </div>
               </div>
             </div>
-            <!-- Mark Bailey -->
             <div class="col-md-6">
               <div style="background: url('testimonial-2.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -268,7 +277,6 @@
         <!-- Slide 2 -->
         <div class="review-slide">
           <div class="row g-4">
-            <!-- Russell Brown -->
             <div class="col-md-6">
               <div style="background: url('testimonial-3.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -279,7 +287,6 @@
                 </div>
               </div>
             </div>
-            <!-- Rob Morris -->
             <div class="col-md-6">
               <div style="background: url('testimonial-4.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -295,7 +302,6 @@
         <!-- Slide 3 -->
         <div class="review-slide">
           <div class="row g-4">
-            <!-- Julian Wood -->
             <div class="col-md-6">
               <div style="background: url('testimonial-5.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -306,7 +312,6 @@
                 </div>
               </div>
             </div>
-            <!-- Geraint Evans -->
             <div class="col-md-6">
               <div style="background: url('testimonial-6.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -322,7 +327,6 @@
         <!-- Slide 4 -->
         <div class="review-slide">
           <div class="row g-4">
-            <!-- David Owen -->
             <div class="col-md-6">
               <div style="background: url('testimonial-7.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -333,7 +337,6 @@
                 </div>
               </div>
             </div>
-            <!-- Emma Evans -->
             <div class="col-md-6">
               <div style="background: url('testimonial-8.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -349,7 +352,6 @@
         <!-- Slide 5 -->
         <div class="review-slide">
           <div class="row g-4">
-            <!-- David Clunas -->
             <div class="col-md-6">
               <div style="background: url('testimonial-9.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -360,7 +362,6 @@
                 </div>
               </div>
             </div>
-            <!-- Wendy Hughes -->
             <div class="col-md-6">
               <div style="background: url('testimonial-10.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -376,7 +377,6 @@
         <!-- Slide 6 -->
         <div class="review-slide">
           <div class="row g-4">
-            <!-- James Vousden -->
             <div class="col-md-6">
               <div style="background: url('testimonial-11.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
                 <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
@@ -391,8 +391,7 @@
           </div>
         </div>
       </div>
-      <!-- "Get a Quote" button at bottom -->
-      <div class="mt-4">
+      <div class="mt-4 text-center">
         <a href="contact.html" class="btn btn-green" style="text-transform: none;">Speak with a Local Expert Today</a>
       </div>
     </div>
@@ -430,7 +429,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="faqHeadingOne">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-            What services do you offer as top plasterers near me?
+            What services do you offer as top local plasterers?
           </button>
         </h2>
         <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
@@ -493,7 +492,6 @@
   <!-- SPLIT CTA SECTION -->
   <section class="split-cta-section container-fluid">
     <div class="row g-0">
-      <!-- Left Image -->
       <div class="col-md-6">
         <img
           src="testimonial-9.jpg"
@@ -502,13 +500,12 @@
           style="object-fit: cover; height: 100%;"
         />
       </div>
-      <!-- Right CTA Box -->
       <div class="col-md-6 split-cta-box d-flex flex-column justify-content-center">
         <div class="content-wrapper text-center text-md-start px-4 px-md-5">
           <span class="cta-label mb-2 d-block">CONTACT US</span>
           <h2 class="cta-heading">Ready to Work Together?</h2>
           <p>
-            Looking for reliable "plasterers near me" or a professional "painter and decorator near me"? Our experienced team is here to help with everything from plastering and painting to tiling and property maintenance. Get in touch today!
+            Looking for reliable "local plasterers" or a professional "local painter and decorator"? Our experienced team is here to help with everything from plastering and painting to tiling and property maintenance. Get in touch today!
           </p>
           <a href="contact.html" class="btn btn-green">Speak with a Local Expert Today &raquo;</a>
         </div>
@@ -520,7 +517,6 @@
   <footer class="footer-dark">
     <div class="container">
       <div class="row">
-        <!-- Logo & Newsletter -->
         <div class="col-md-4 mb-4">
           <div class="d-flex align-items-center mb-3">
             <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;">
@@ -536,7 +532,6 @@
             <button class="ms-2">Submit</button>
           </div>
         </div>
-        <!-- Pages Links -->
         <div class="col-md-2 mb-4">
           <h5>Pages</h5>
           <ul class="list-unstyled">
@@ -546,7 +541,6 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <!-- Follow Us -->
         <div class="col-md-2 mb-4">
           <h5>Follow Us</h5>
           <div class="d-flex gap-2">
@@ -565,7 +559,7 @@
       </div>
     </div>
   </footer>
-
+  
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -583,13 +577,14 @@
       });
     }
 
-    // Show the first slide by default
+    // Show the first slide initially
     showReview(reviewIndex);
 
     reviewPrev.addEventListener('click', () => {
       reviewIndex = (reviewIndex - 1 + reviewSlides.length) % reviewSlides.length;
       showReview(reviewIndex);
     });
+
     reviewNext.addEventListener('click', () => {
       reviewIndex = (reviewIndex + 1) % reviewSlides.length;
       showReview(reviewIndex);

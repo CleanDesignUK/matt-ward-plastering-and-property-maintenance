@@ -1,7 +1,7 @@
 /*
   About Page CSS
-  This file replicates the exact navbar, footer, and color scheme of the Services page.
-  WOW factor has been added via fadeInUp animations on major sections.
+  Navbar, hero, footer have no side padding (like Contact),
+  but .about-intro now has side padding for its text.
 */
 
 /* Variables */
@@ -9,7 +9,7 @@
   --title-color: #7f797d;
   --subtitle-color: #7f797d;
 
-  /* The colors for the main CTA buttons and arrows, as per your request */
+  /* The colors for the main CTA buttons and arrows */
   --btn-bg: #deda7a;
   --btn-text: #645e62;
   --btn-hover-bg: #645e62;
@@ -31,11 +31,45 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+
+/* Remove side padding globally (like Contact) */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
   color: var(--dark);
+  background-color: var(--bg-color) !important;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+/* Force .container to have no side padding, like Contact */
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ADD side padding specifically for the about-intro section */
+.about-intro {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+
+/* ADD side padding specifically for the about-intro section */
+.vision-mission {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+
+/* ADD side padding specifically for the about-intro section */
+.benefits-section {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+
+/* ADD side padding specifically for the about-intro section */
+.testimonials {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+
+/* Headings & subtitles */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
   color: var(--title-color);
@@ -45,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--subtitle-color);
 }
 
-/* NAVBAR (Sticky, same as Services) - UNCHANGED */
+/* NAVBAR (No side padding, matches Contact) */
 .sticky-navbar {
   position: sticky;
   top: 0;
@@ -80,7 +114,6 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link:hover {
   text-decoration: underline;
 }
-/* Contact button in navbar remains as it was originally */
 .btn-contact {
   background-color: #645e62;
   color: #deda7a;
@@ -92,16 +125,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #645e62;
 }
 
-/* HERO SECTION: h1 color forced to white */
+/* HERO SECTION (Clamp-based height, no side padding) */
 .about-hero {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: clamp(300px, 80vh, 800px);
   background: url('about-hero.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 1.5s ease-out !important;
 }
 .about-hero-overlay {
   background-color: rgba(0, 0, 0, 0.4);
@@ -113,21 +145,34 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 .about-hero-overlay h1 {
-  color: #ffffff; /* hero H1 in white */
+  color: #ffffff;
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 .about-hero-overlay p {
   font-family: 'Mulish', sans-serif;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.btn-appointment {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+  border: none;
+}
+.btn-appointment:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
-/* ABOUT INTRO */
-.about-intro {
-  padding: 3rem 0;
-}
+/* ABOUT ROWS, STATS, ETC. (unchanged) */
 .about-row {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.3rem;
 }
 
-/* KEY BENEFITS */
+/* BENEFITS SECTION */
 .benefits-section {
   padding: 3rem 0;
   text-align: center;
@@ -287,21 +332,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-top: 2rem;
 }
-/* CTA button here uses your new color request: background #deda7a, text #645e62, hover reversed */
-.btn-appointment {
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s;
-  border: none;
-}
-.btn-appointment:hover {
-  background-color: var(--btn-hover-bg);
-  color: var(--btn-hover-text);
-}
 
 /* TESTIMONIALS */
 .testimonials {
@@ -341,7 +371,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1rem;
 }
 .testimonial-controls button {
-  /* Arrows background #deda7a, text #645e62; reversed on hover/click */
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border: none;
@@ -357,9 +386,8 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--btn-hover-text);
 }
 
-/* CALL TO ACTION SECTION */
+/* CTA SECTION */
 .cta-section {
-  /* Requested background #deda7a, text #645e62 */
   background-color: #deda7a;
   color: #645e62;
   padding: 3rem 1rem;
@@ -375,7 +403,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   color: #645e62;
 }
-/* CTA button inside this section: background #645e62, text #deda7a; reversed on hover */
 .cta-section .btn-appointment {
   background-color: #645e62 !important;
   color: #deda7a !important;
@@ -385,7 +412,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #645e62 !important;
 }
 
-/* FOOTER */
+/* FOOTER (No side padding, matches Contact) */
 .footer-dark {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -477,5 +504,9 @@ h1, h2, h3, h4, h5, h6 {
   .btn-appointment {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
+  }
+  /* Single column in benefits on small screens */
+  .benefits-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -34,12 +34,19 @@ html, body {
   margin: 0 !important;
   padding: 0 !important;
   background-color: var(--bg-color) !important;
-}
-body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
   color: var(--dark);
+  /* Remove horizontal scroll */
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
+/* Add side whitespace for the body */
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Josefin Sans', sans-serif;
   color: var(--title-color);
@@ -95,11 +102,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #645e62;
 }
 
-/* HERO SECTION (identical to About page) */
+/* HERO SECTION (identical to About page, except now using clamp for responsiveness) */
 .about-hero {
   position: relative;
   width: 100%;
-  height: 800px;
+  /* Instead of a fixed 800px height, use clamp to stay responsive */
+  height: clamp(300px, 80vh, 800px);
   background: url('contact-hero.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -116,6 +124,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   text-align: center;
   animation: fadeIn 1.5s ease-out forwards;
+}
+@media (max-width: 576px) {
+  .about-hero-overlay {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 .about-hero-overlay h1 {
   color: #ffffff;
@@ -140,6 +154,17 @@ h1, h2, h3, h4, h5, h6 {
 .btn-hero-cta:hover {
   background-color: var(--btn-hover-bg);
   color: var(--btn-hover-text);
+}
+
+/* Fix CTA button on smaller screens */
+@media (max-width: 576px) {
+  .btn-hero-cta {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    max-width: 80%;
+    text-align: center;
+    display: inline-block;
+  }
 }
 
 /* FOOTER (identical to About page) */
@@ -186,26 +211,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* FIX MARGIN/PADDING AND WHITE SPACE:
-   Remove extra padding from container elements */
-.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
+/*
+  Previously removed extra padding from .container,
+  but we need side spacing. So the override is removed
+  to allow Bootstrap's default container padding.
+*/
 
 /* MEDIA QUERIES (matching About page) */
 @media (max-width: 768px) {
   .company-name {
     display: none;
-  }
-  .about-hero {
-    height: 300px;
-  }
-  .about-hero-overlay h1 {
-    font-size: 2.2rem;
-  }
-  .about-hero-overlay p {
-    font-size: 1rem;
   }
 }
 @media (max-width: 576px) {
@@ -232,7 +247,6 @@ h1, h2, h3, h4, h5, h6 {
   aspect-ratio: 1 / 1;
   max-width: 600px; /* Adjust as needed */
 }
-
 .map-container iframe {
   width: 100%;
   height: 100%;

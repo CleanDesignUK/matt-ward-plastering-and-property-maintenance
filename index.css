@@ -23,26 +23,14 @@
   to { transform: scale(1.05); }
 }
 
+/* Remove all global side padding */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--dark);
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', sans-serif;
-  color: var(--title-color);
-}
-.subtitle {
-  font-family: 'Mulish', sans-serif;
-  color: var(--subtitle-color);
-}
 
-/* Container side-padding fix */
+/* Container side-padding (for interior sections only) */
 .container {
   padding-left: 10px;
   padding-right: 10px;
@@ -54,9 +42,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* NAVBAR (fixed) */
+/* NAVBAR */
+/* Using container (not container-fluid) so navbar has side padding on big screens */
 .sticky-navbar {
-  position: fixed;
+  position: sticky;  /* Changed from fixed to sticky */
   top: 0;
   width: 100%;
   z-index: 9999;
@@ -101,7 +90,63 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--btn-hover-text);
 }
 
-/* CTA BUTTONS */
+/* HERO SECTION */
+/* Full-width hero with clamp-based height */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 550px; /* Increased for extra vertical space */
+  background: url('hero.jpg') no-repeat center center/cover !important;
+  animation: fadeIn 1.5s ease-out forwards;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Added extra top padding so text is centered below the sticky navbar */
+  padding-top: 6rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+/* Override container inside hero-overlay to remove side padding */
+.hero-overlay .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.hero-overlay h1,
+.hero-overlay p {
+  color: var(--white);
+}
+
+/* ADD side padding specifically for the about-intro section */
+.about-us-section {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+/* ADD side padding specifically for the about-intro section */
+.core-services {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+/* ADD side padding specifically for the about-intro section */
+.recent-projects {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+/* ADD side padding specifically for the about-intro section */
+.certs-awards {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+/* ADD side padding specifically for the about-intro section */
+.areas-served {
+  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+}
+
+/* BUTTONS */
 .btn-green {
   background-color: var(--btn-bg) !important;
   color: var(--btn-text) !important;
@@ -124,36 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--btn-text);
 }
 
-/* HERO SECTION */
-/* ADDED position: relative TO .hero-section */
-.hero-section {
-  position: relative; /* ADDED */
-  width: 100%;
-  height: 800px !important;
-  background: url('hero.jpg') no-repeat center center/cover;
-  animation: fadeIn 1.5s ease-out forwards;
-}
-/* ADDED position: absolute, top/left 0 TO .hero-overlay */
-.hero-overlay {
-  position: absolute; /* ADDED */
-  top: 0;             /* ADDED */
-  left: 0;            /* ADDED */
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-}
-.hero-overlay h1,
-.hero-overlay p {
-  color: var(--white);
-}
-
-/* ABOUT US */
+/* ABOUT US SECTION */
 .about-us-section {
   padding: 3rem 0;
 }
@@ -269,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f8f9f3;
 }
 .review-slider {
-  display: block; 
+  display: block;
 }
 .review-slide {
   display: none;
@@ -333,11 +349,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--gray);
 }
 
-/* New Split Section */
+/* SPLIT CTA SECTION */
 .split-cta-section {
   margin-bottom: 3rem;
 }
-.split-cta-section .split-cta-box {
+.split-cta-box {
   background-color: #645e62;
   min-height: 350px;
   position: relative;
@@ -374,6 +390,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* FOOTER */
+/* Override footer container to have no side padding */
+.footer-dark .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 .footer-dark {
   background-color: var(--footer-bg);
   color: var(--footer-text);
@@ -430,74 +451,48 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
   }
 }
-
 @media (max-width: 576px) {
-  .hero-section {
-    height: 300px;
-  }
   .hero-overlay h1 {
     font-size: 1.8rem;
   }
   .hero-overlay p {
     font-size: 1rem;
   }
-  /* Adjust padding for About Us section */
   .about-us-section {
     padding: 2rem 0;
   }
-  /* Improve CTA button appearance */
   .btn-green {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
-  /* Stack CTA buttons vertically in designated containers */
   .cta-buttons {
     flex-direction: column !important;
     gap: 1rem;
   }
-  /* Reduce padding for Our Services section */
   .core-services {
     padding: 2rem 0;
   }
-  /* Reduce padding for Gallery section */
   .recent-projects {
     padding: 2rem 0;
   }
-  /* Reduce padding for Certifications & Awards section */
   .certs-awards {
     padding: 2rem 0;
   }
-  /* Adjust padding for Reviews section */
   .reviews-section {
     padding: 2rem 1rem;
   }
-  /* Adjust padding for Areas We Serve section */
   .areas-served {
     padding: 2rem 0;
   }
   .areas-box {
     padding: 2rem;
   }
-  /* Reduce testimonial container min-height */
   .review-slide .col-md-6 > div {
     min-height: 250px !important;
   }
-  /* Adjust inner testimonial margins */
   .review-slide div[style*="margin: 2rem"] {
     margin: 1rem !important;
     width: 90% !important;
     padding: 0.5rem !important;
-  }
-  /* Add extra margin and padding on sides and top for all sections */
-  section {
-    margin-top: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  /* Add extra top padding to the body for small screens */
-  body {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
