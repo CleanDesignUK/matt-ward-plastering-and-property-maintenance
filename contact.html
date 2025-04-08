@@ -33,7 +33,7 @@
 </head>
 <body>
   <!--======================
-      NAVBAR (EXACT copy from About page)
+      NAVBAR (matching index)
   ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
@@ -41,20 +41,47 @@
         <img src="matt-ward-ppm-logo.png" alt="Matt Ward Logo" />
         <span class="company-name ms-2">Matt Ward Plastering &amp; Property Maintenance</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item ms-3"><a href="contact.html" class="btn btn-contact">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+              <li><a class="dropdown-item" href="plastering.html">Plastering</a></li>
+              <li><a class="dropdown-item" href="painting.html">Painting &amp; Decorating</a></li>
+              <li><a class="dropdown-item" href="tiling.html">Tiling</a></li>
+              <li><a class="dropdown-item" href="renovations.html">Renovations & Repairs</a></li>
+              <li><a class="dropdown-item" href="services.html#building-kitchen-bathroom">Building, Kitchen &amp; Bathroom</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="contact.html" class="btn btn-contact">Contact Us</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
+
 
   <!--======================
       HERO SECTION (EXACT copy from About page, but responsive height fix)
@@ -258,6 +285,14 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+                <!-- Pages Links -->
+                <div class="col-md-2 mb-4">
+                  <h5>Policies</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
         <!-- Follow Us -->
         <div class="col-md-2 mb-4">
           <h5>Follow Us</h5>

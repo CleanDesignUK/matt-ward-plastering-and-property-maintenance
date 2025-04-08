@@ -37,7 +37,7 @@
 </head>
 <body>
   <!--======================
-      NAVBAR
+      NAVBAR (matching index)
   ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
@@ -58,14 +58,33 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <li class="nav-item ms-3"><a href="contact.html" class="btn btn-contact">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+              <li><a class="dropdown-item" href="plastering.html">Plastering</a></li>
+              <li><a class="dropdown-item" href="painting.html">Painting &amp; Decorating</a></li>
+              <li><a class="dropdown-item" href="tiling.html">Tiling</a></li>
+              <li><a class="dropdown-item" href="renovations.html">Renovations & Repairs</a></li>
+              <li><a class="dropdown-item" href="services.html#building-kitchen-bathroom">Building, Kitchen &amp; Bathroom</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="contact.html" class="btn btn-contact">Contact Us</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <!--======================
       SECTION 1 (Hero + Title Left, Image Right)
@@ -260,7 +279,7 @@
           <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
-              <img src="tiling-1.jpg" class="d-block w-100 img-fluid" alt="Project 1" />
+              <img src="tiling-project-3.jpg" class="d-block w-100 img-fluid" alt="Project 1" />
             </div>
             <!-- Slide 2 -->
             <div class="carousel-item">
@@ -304,14 +323,15 @@
         <!-- Card 1 -->
         <div class="testimonial-box">
           <i class="bi bi-chat-left-quote-fill fs-2"></i>
-          <p>John transformed our home with exceptional tiling. Truly professional!</p>
-          <h5>JOHN SMITH</h5>
+          <p>Professional, tidy, and top-notch workmanship—Matt’s done several jobs for us and we can’t recommend him enough.
+          </p>
+          <h5>EMMA EVANS</h5>
         </div>
         <!-- Card 2 -->
         <div class="testimonial-box">
           <i class="bi bi-chat-left-quote-fill fs-2"></i>
-          <p>Sarah’s attention to detail in tile installation exceeded our expectations!</p>
-          <h5>SARAH JONES</h5>
+          <p>Matt and his team consistently deliver high-quality work. Their recent major home alteration was excellent—punctual, hardworking, and highly recommended.</p>
+          <h5>DAVID PARRY</h5>
         </div>
       </div>
       <!-- Right Side Text -->
@@ -325,8 +345,8 @@
     </div>
   </section>
 
-  <!--======================
-      FOOTER
+    <!--======================
+      FOOTER (EXACT copy from About page)
   ======================-->
   <footer class="footer-dark">
     <div class="container">
@@ -334,7 +354,7 @@
         <!-- Logo & Newsletter -->
         <div class="col-md-4 mb-4">
           <div class="d-flex align-items-center mb-3">
-            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;" />
+            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;">
             <span class="ms-2 fw-bold" style="font-family: 'Josefin Sans', sans-serif;">
               Matt Ward Plastering &amp; Property Maintenance
             </span>
@@ -343,7 +363,7 @@
             Over 30 years of experience in plastering, painting &amp; decorating, tiling, and property maintenance. Based in Beaumaris, serving Anglesey, Gwynedd, and beyond.
           </p>
           <div class="newsletter-form mt-3 d-flex">
-            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" />
+            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address">
             <button class="ms-2">Submit</button>
           </div>
         </div>
@@ -357,6 +377,14 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+                <!-- Pages Links -->
+                <div class="col-md-2 mb-4">
+                  <h5>Policies</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
         <!-- Follow Us -->
         <div class="col-md-2 mb-4">
           <h5>Follow Us</h5>

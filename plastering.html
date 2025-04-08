@@ -38,7 +38,7 @@
 </head>
 <body>
   <!--======================
-      NAVBAR
+      NAVBAR (matching index)
   ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
@@ -59,14 +59,33 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-          <li class="nav-item ms-3"><a href="contact.html" class="btn btn-contact">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+              <li><a class="dropdown-item" href="plastering.html">Plastering</a></li>
+              <li><a class="dropdown-item" href="painting.html">Painting &amp; Decorating</a></li>
+              <li><a class="dropdown-item" href="tiling.html">Tiling</a></li>
+              <li><a class="dropdown-item" href="renovations.html">Renovations & Repairs</a></li>
+              <li><a class="dropdown-item" href="services.html#building-kitchen-bathroom">Building, Kitchen &amp; Bathroom</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="contact.html" class="btn btn-contact">Contact Us</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <!--======================
       SECTION 1 (Hero + Title Left, Image Right)
@@ -151,7 +170,7 @@
           <div class="col-md-6">
             <h3>Wall Repairs &amp; Prep</h3>
             <p>
-              Our expert team specializes in repairing wall cracks, holes, and damaged plaster to restore structural integrity and achieve a smooth finish. As trusted <strong>plasterers near me</strong>, we guarantee swift and efficient service.
+              Our expert team specialises in repairing wall cracks, holes, and damaged plaster to restore structural integrity and achieve a smooth finish. As trusted <strong>plasterers near me</strong>, we guarantee swift and efficient service.
             </p>
             <h4>Structural Restoration</h4>
             <p>
@@ -226,7 +245,7 @@
             <i class="bi bi-bricks fs-1"></i>
           <h5>Wall Restoration</h5>
           <p>
-            Revitalize your walls with comprehensive restoration techniques that bring back their original beauty and durability.
+            Revitalise your walls with comprehensive restoration techniques that bring back their original beauty and durability.
           </p>
         </div>
       </div>
@@ -306,14 +325,14 @@
         <!-- Card 1 -->
         <div class="testimonial-box">
           <i class="bi bi-chat-left-quote-fill fs-2"></i>
-          <p>Matt is highly professional, skilled, and tidy. Highly recommended!</p>
-          <h5>EMMA EVANS</h5>
+          <p>Outstanding re-skimming work in two rooms—excellent service and top-quality craftsmanship. Highly recommended.</p>
+          <h5>AARON OWEN</h5>
         </div>
         <!-- Card 2 -->
         <div class="testimonial-box">
           <i class="bi bi-chat-left-quote-fill fs-2"></i>
-          <p>Matt provided a prompt and high-quality plastering service. Very satisfied!</p>
-          <h5>DAVID CLUNAS</h5>
+          <p>Matt plastered our living room - great job and very clean! Would certainly recommend </p>
+          <h5>ADAM JONES</h5>
         </div>
       </div>
       <!-- Right Side Text -->
@@ -327,8 +346,8 @@
     </div>
   </section>
 
-  <!--======================
-      FOOTER
+    <!--======================
+      FOOTER (EXACT copy from About page)
   ======================-->
   <footer class="footer-dark">
     <div class="container">
@@ -336,7 +355,7 @@
         <!-- Logo & Newsletter -->
         <div class="col-md-4 mb-4">
           <div class="d-flex align-items-center mb-3">
-            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;" />
+            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;">
             <span class="ms-2 fw-bold" style="font-family: 'Josefin Sans', sans-serif;">
               Matt Ward Plastering &amp; Property Maintenance
             </span>
@@ -345,7 +364,7 @@
             Over 30 years of experience in plastering, painting &amp; decorating, tiling, and property maintenance. Based in Beaumaris, serving Anglesey, Gwynedd, and beyond.
           </p>
           <div class="newsletter-form mt-3 d-flex">
-            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" />
+            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address">
             <button class="ms-2">Submit</button>
           </div>
         </div>
@@ -359,6 +378,14 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+                <!-- Pages Links -->
+                <div class="col-md-2 mb-4">
+                  <h5>Policies</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
         <!-- Follow Us -->
         <div class="col-md-2 mb-4">
           <h5>Follow Us</h5>

@@ -44,7 +44,7 @@
 </head>
 <body>
   <!--======================
-      NAVBAR (No side padding, identical to Contact page)
+      NAVBAR (using custom sticky class only)
   ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
@@ -65,14 +65,33 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item ms-3"><a href="contact.html" class="btn btn-contact">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+              <li><a class="dropdown-item" href="plastering.html">Plastering</a></li>
+              <li><a class="dropdown-item" href="painting.html">Painting &amp; Decorating</a></li>
+              <li><a class="dropdown-item" href="tiling.html">Tiling</a></li>
+              <li><a class="dropdown-item" href="renovations.html">Renovations & Repairs</a></li>
+              <li><a class="dropdown-item" href="services.html#building-kitchen-bathroom">Building, Kitchen &amp; Bathroom</a></li>
+            </ul>
+          </li>
+          <li class="nav-item ms-3">
+            <a href="contact.html" class="btn btn-contact">Contact Us</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <!--======================
       HERO SECTION (Clamp-based height, no side padding, identical to Contact)
@@ -81,20 +100,20 @@
     <div class="about-hero-overlay fadeInUp">
       <h1>About Us</h1>
       <p>Your Trusted Partner in Plastering, Painting &amp; Renovations</p>
-      <a href="services.html" class="btn btn-appointment">Discover Expert Property Services</a>
+      <a href="#about-matt-ward" class="btn btn-appointment">Discover More About Us</a>
     </div>
   </section>
 
   <!--======================
       ABOUT INTRO + FOUNDER INFO
   ======================-->
-  <section class="about-intro container fadeInUp">
+  <section class="about-intro container fadeInUp" id="about-matt-ward">
     <div class="about-row">
       <!-- Left text column -->
       <div class="about-col">
         <h2>Matt Ward Plastering &amp; Property Maintenance</h2>
         <p>
-          For over 30 years, we have proudly served Anglesey, Gwynedd, and the surrounding areas from our base in beautiful Beaumaris. Our team specializes in expert plastering, painting &amp; decorating, tiling, and comprehensive property maintenance solutions. We combine decades of experience with modern techniques to transform properties into comfortable, vibrant, and durable spaces.
+          For over 30 years, we have proudly served Anglesey, Gwynedd, and the surrounding areas from our base in beautiful Beaumaris. Our team specialises in expert plastering, painting &amp; decorating, tiling, and comprehensive property maintenance solutions. We combine decades of experience with modern techniques to transform properties into comfortable, vibrant, and durable spaces.
         </p>
         <p>
           Whether you need a fresh coat of paint, precise tiling, or a full-scale renovation, we are committed to delivering exceptional results. Our emphasis on quality, reliability, and customer satisfaction sets us apart—and keeps our clients coming back.
@@ -185,7 +204,7 @@
       </div>
       <div class="benefit-box">
         <i class="bi bi-door-open-fill"></i>
-        <h4>Personalized Approach</h4>
+        <h4>Personalised Approach</h4>
         <p>
           Every project is unique; we tailor our services to meet your specific vision, timeline, and budget.
         </p>
@@ -267,7 +286,7 @@
   </section>
 
   <!--======================
-      FOOTER (Matches Contact page, no side padding)
+      FOOTER (EXACT copy from About page)
   ======================-->
   <footer class="footer-dark">
     <div class="container">
@@ -275,7 +294,7 @@
         <!-- Logo & Newsletter -->
         <div class="col-md-4 mb-4">
           <div class="d-flex align-items-center mb-3">
-            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;" />
+            <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;">
             <span class="ms-2 fw-bold" style="font-family: 'Josefin Sans', sans-serif;">
               Matt Ward Plastering &amp; Property Maintenance
             </span>
@@ -284,7 +303,7 @@
             Over 30 years of experience in plastering, painting &amp; decorating, tiling, and property maintenance. Based in Beaumaris, serving Anglesey, Gwynedd, and beyond.
           </p>
           <div class="newsletter-form mt-3 d-flex">
-            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address" />
+            <input type="email" class="form-control" placeholder="Email address..." aria-label="Email address">
             <button class="ms-2">Submit</button>
           </div>
         </div>
@@ -298,6 +317,14 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+                <!-- Pages Links -->
+                <div class="col-md-2 mb-4">
+                  <h5>Policies</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
         <!-- Follow Us -->
         <div class="col-md-2 mb-4">
           <h5>Follow Us</h5>

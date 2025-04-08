@@ -9,8 +9,8 @@
   <link rel="icon" href="mw-logo-icon.png" type="image/jpeg">
   
   <!-- SEO Meta -->
-  <meta name="description" content="Matt Ward Plastering & Property Maintenance offers expert plastering, painting and decorating, tiling, and property maintenance services. Based in Beaumaris, serving Anglesey, Gwynedd and surrounding areas for over 30 years." />
-  <meta name="keywords" content="plasterers near me, painter and decorator near me, painting and decorating, tilers near me, property maintenance" />
+  <meta name="description" content="Matt Ward Plastering & Property Maintenance offers expert plastering, painting and decorating, tiling, property maintenance and renovation services. Based in Beaumaris, serving Anglesey, Gwynedd and surrounding areas for over 30 years." />
+  <meta name="keywords" content="plasterers near me, painter and decorator, tiling, property maintenance, kitchen renovation, bathroom remodeling, building services" />
   
   <!-- Google Fonts -->
   <!-- Title: Josefin Sans -->
@@ -25,6 +25,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- NEW: Archivo font for the "our skilled" paragraph -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <!-- Bootstrap CSS -->
   <link
@@ -45,7 +49,7 @@
 </head>
 <body>
   <!--======================
-      NAVBAR (using container so there is side padding on larger screens)
+      NAVBAR (matching index)
   ======================-->
   <nav class="navbar navbar-expand-lg sticky-navbar">
     <div class="container">
@@ -72,8 +76,18 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services.html">Services</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Our Services</a></li>
+              <li><a class="dropdown-item" href="plastering.html">Plastering</a></li>
+              <li><a class="dropdown-item" href="painting.html">Painting &amp; Decorating</a></li>
+              <li><a class="dropdown-item" href="tiling.html">Tiling</a></li>
+              <li><a class="dropdown-item" href="renovations.html">Renovations & Repairs</a></li>
+              <li><a class="dropdown-item" href="services.html#building-kitchen-bathroom">Building, Kitchen &amp; Bathroom</a></li>
+            </ul>
           </li>
           <li class="nav-item ms-3">
             <a href="contact.html" class="btn btn-contact">Contact Us</a>
@@ -83,11 +97,11 @@
     </div>
   </nav>
 
+
+
   <!-- HERO SECTION -->
   <section class="hero-section">
-    <!-- The hero-overlay absolutely covers the hero section -->
     <div class="hero-overlay">
-      <!-- Removed extra container padding by overriding it in CSS -->
       <div class="container text-center">
         <h1>Transform Your Space with Expert Craftsmanship</h1>
         <p>Based in Beaumaris – Proudly serving Anglesey, Gwynedd and surrounding areas for over 30 years.</p>
@@ -106,7 +120,7 @@
         <small>— ABOUT US</small>
         <h2 class="mt-2">Expert Plastering, Painting &amp; Tiling for Your Home</h2>
         <p class="mt-3">
-          At Matt Ward Plastering & Property Maintenance, our skilled team specializes in premium plastering, painting and decorating, and tiling services. We combine modern techniques with traditional craftsmanship to deliver outstanding results. Whether you're searching for "plasterers nearby" or a "painter and decorator nearby," our reputation for excellence speaks for itself.
+          At Matt Ward Plastering &amp; Property Maintenance, our skilled team specialises in premium plastering, painting and decorating, and tiling services. We combine modern techniques with traditional craftsmanship to deliver outstanding results. Whether you're searching for "plasterers nearby" or a "painter and decorator nearby," our reputation for excellence speaks for itself.
         </p>
         <div class="mt-4 d-flex gap-3 cta-buttons">
           <a href="contact.html" class="btn btn-green">Request Your Free Estimate</a>
@@ -171,14 +185,55 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="mt-4 d-flex gap-3 cta-buttons">
-        <a href="contact.html" style="background-color: #fff; color: #000; border: none; padding: 0.7rem 1.2rem; font-weight: 500; border-radius: 4px; text-decoration: none;">
-          Request Your Free Estimate
+  <!-- BUILDING, KITCHEN AND BATHROOM SECTION -->
+  <section class="bkb-section" style="background-color: #000; padding: 3rem 0;">
+    <div class="container">
+      <!-- Title & button row -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
+        <div>
+          <h2 style="color: #fff; font-size: 2.2rem; margin-bottom: 0;">Building, Kitchen and Bathroom</h2>
+          <p style="color: #fff; font-size: 1.3rem; margin: 0;">Our Speciality</p>
+        </div>
+        <a href="services.html" class="btn btn-green mt-3 mt-md-0" style="font-size: 1.1rem;">
+          Explore Renovation Solutions
         </a>
-        <a href="services.html" style="background-color: #fff; color: #000; border: none; padding: 0.7rem 1.2rem; font-weight: 500; border-radius: 4px; text-decoration: none;">
-          Explore Our Services
-        </a>
+      </div>
+
+      <div class="row">
+        <!-- Large image (left) -->
+        <div class="col-md-7 mb-4 mb-md-0">
+          <div style="border-radius: 12px; overflow: hidden;">
+            <img src="bkb-services.jpg" alt="Large BKB Image" style="width: 100%; display: block;">
+          </div>
+        </div>
+        <!-- Right column -->
+        <div class="col-md-5 d-flex flex-column justify-content-start">
+          <!-- Smaller top image (half height) -->
+          <div style="border-radius: 12px; overflow: hidden;">
+            <img src="bkb-services-2.jpg" alt="Small BKB Image"
+                 style="width: 100%; display: block; height: 350px; object-fit: cover;">
+          </div>
+
+          <!-- Dark box with bigger icon (contained), heading, SEO content text, creative CTA link -->
+          <div style="background-color: #111; border-radius: 8px; padding: 1rem; margin-top: 1rem;">
+            <div class="d-flex align-items-center">
+              <div style="background-color: var(--btn-text); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="bi bi-grid-fill" style="color: var(--btn-bg); font-size: 2rem;"></i>
+              </div>
+              <h4 style="color: #fff; margin: 0 0 0 1rem; font-size: 1.3rem;">Building, Kitchen &amp; Bathroom</h4>
+            </div>
+            <p style="color: #fff; margin-top: 0.75rem; font-size: 1.1rem;">
+              Upgrade your living spaces with our comprehensive renovation services. We transform outdated layouts into modern, functional areas that add value and style.
+            </p>
+          </div>
+          <!-- Real SEO-friendly paragraph using Archivo font -->
+          <p style="font-family: 'Archivo', sans-serif; color: #fff; margin-top: 1rem; font-size: 2rem;">
+            Let our expert team deliver exceptional results from concept to completion. <a href="contact.html"><i class="bi bi-arrow-up-right-circle-fill" style="color: var(--btn-text);"></i></a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -203,7 +258,7 @@
         </p>
         <div class="mt-4 d-flex gap-3 cta-buttons">
           <a href="contact.html" class="btn btn-green" style="text-transform: none;">Schedule Your Free Consultation</a>
-          <a href="portfolio.html" class="btn btn-outline-green" style="text-transform: none;">View Our Project Gallery</a>
+          <a href="services.html" class="btn btn-outline-green" style="text-transform: none;">View Our Property Maintenance Services</a>
         </div>
       </div>
       <div class="col-md-6">
@@ -226,268 +281,309 @@
       <div class="cert-box">
         <img src="labc-logo.jpg" alt="LABC Building Excellence" class="cert-logo">
         <h4>LABC Building Excellence</h4>
-        <p>Recognized for outstanding building quality and adherence to rigorous industry standards.</p>
+        <p>Recognised for outstanding building quality and adherence to rigorous industry standards.</p>
       </div>
     </div>
   </section>
 
-  <!-- REVIEWS SECTION -->
-  <section class="reviews-section" style="padding: 3rem 2rem; background-color: #f8f9f3;">
+  <!-- OUR LATEST PROJECTS SECTION (MOVED BEFORE TESTIMONIAL) -->
+  <section class="latest-project-hero">
+    <div class="latest-hero-overlay"></div>
+    <div class="container text-center position-relative">
+      <h2 class="lp-hero-title" data-aos="fade-up">Our Latest Projects</h2>
+      <p class="lp-hero-desc" data-aos="fade-up" data-aos-delay="200">
+        Discover how Matt Ward Plastering &amp; Property Maintenance elevates homes throughout Anglesey. From kitchen remodels to entire property overhauls, our proven expertise creates lasting value and comfort.
+      </p>
+    </div>
+  </section>
+  
+  <section class="latest-project-cards">
     <div class="container">
-      <!-- Center heading and place arrows beneath for better look -->
-      <div class="text-center mb-4">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333;">What Our Customers Say</h2>
-        <div>
-          <button class="prev-btn" 
-                  style="border: none; background: transparent; font-size: 1.5rem; margin-right: 1rem; cursor: pointer;">
-            ←
-          </button>
-          <button class="next-btn" 
-                  style="border: none; background: transparent; font-size: 1.5rem; cursor: pointer;">
-            →
-          </button>
-        </div>
-      </div>
-      <div class="review-slider">
-        <!-- Slide 1 -->
-        <div class="review-slide active">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div style="background: url('testimonial-1.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “Excellent quality of work, and always there to help when needed. Highly recommended.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Peter</p>
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-4 mx-auto" data-aos="zoom-in-up" data-aos-delay="400">
+          <div class="lp-card">
+            <div class="lp-card-img" style="background-image: url('holidaylet-project.jpg');"></div>
+            <div class="lp-card-body">
+              <div class="lp-card-meta d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="unique-homestays-logo.png" alt="Unique Homestays" class="lp-card-avatar">
+                  <div class="lp-card-author-date">
+                    <p class="author-name">Unique Homestays</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div style="background: url('testimonial-2.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “I used Matt to fix and secure a leaking drain pipe and gutter in my yard. He was there the same day, fixed it, very affordable… and left no mess… thanks Matt!”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Mark Bailey</p>
-                </div>
-              </div>
+              <h3 class="lp-card-title">Expert Work, Exceptional Finish</h3>
+              <p>This project shows the care and detail we bring to every job. From expert plastering to full property maintenance, we deliver quality that lasts.</p>
+              <span><a href="https://www.uniquehomestays.com/self-catering/uk/wales/anglesey/saffron-tower/#gphoto-11" class="btn btn-green mt-3">See the Project &raquo;</a></span>
             </div>
           </div>
         </div>
-        <!-- Slide 2 -->
-        <div class="review-slide">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div style="background: url('testimonial-3.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “Matt came highly recommended to us. We needed an external door removed and the gap rebuilt. Insulation, plaster board, and rendering were completed to a very high standard.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Russell Brown</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div style="background: url('testimonial-4.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “Had lots of work done on my house. Very clean and professional. Matt is not only skilled but also a genuinely nice person. Highly recommend.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Rob Morris</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="review-slide">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div style="background: url('testimonial-5.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “Traditional skills meet modern standards. Matt’s apprenticeship and expertise shine through in every project.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Julian Wood</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div style="background: url('testimonial-6.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “I use Matt for all types of home repairs – his work in plastering and property maintenance is outstanding.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Geraint Evans</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="review-slide">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div style="background: url('testimonial-7.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “The ultimate professional. Can turn his hand to anything, always leaves the job tidy, turns up on time, and gives it 100%.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– David Owen</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div style="background: url('testimonial-8.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “Professional, detailed and efficient – Matt’s workmanship is second to none.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Emma Evans</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 5 -->
-        <div class="review-slide">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div style="background: url('testimonial-9.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “After reading excellent reviews, I chose Matt for my plastering project. His work was prompt, professional, and flawless.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– David Clunas</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div style="background: url('testimonial-10.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “I highly recommend Matt and his team – they converted our attic flawlessly while keeping the work area spotless.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– Wendy Hughes</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Slide 6 -->
-        <div class="review-slide">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div style="background: url('testimonial-11.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
-                <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
-                  <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
-                    “Quick, efficient and tidy – Matt provided an excellent internal lime render with minimal disruption.”
-                  </blockquote>
-                  <p class="review-author" style="font-weight: 600; color: #555;">– James Vousden</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 d-none d-md-block"></div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4 text-center">
-        <a href="contact.html" class="btn btn-green" style="text-transform: none;">Speak with a Local Expert Today</a>
       </div>
     </div>
   </section>
+  
+  <!-- END OUR LATEST PROJECTS SECTION -->
+
+<!-- REVIEWS SECTION -->
+<section class="reviews-section" style="padding: 3rem 2rem; background-color: #f8f9f3;">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333;">What Our Customers Say</h2>
+      <div>
+        <button class="prev-btn" 
+                style="border: none; background: transparent; font-size: 1.5rem; margin-right: 1rem; cursor: pointer;">
+          ←
+        </button>
+        <button class="next-btn" 
+                style="border: none; background: transparent; font-size: 1.5rem; cursor: pointer;">
+          →
+        </button>
+      </div>
+    </div>
+    <div class="review-slider">
+      <!-- Slide 1 -->
+      <div class="review-slide active">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: url('testimonial-1.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “Excellent quality of work, and always there to help when needed. Highly recommended.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Peter</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: url('testimonial-2.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “I used Matt to fix and secure a leaking drain pipe and gutter in my yard. He was there the same day, fixed it, very affordable… and left no mess… thanks Matt!”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Mark Bailey</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="review-slide">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: url('testimonial-3.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “Matt came highly recommended to us. We needed an external door removed and the gap rebuilt. Insulation, plaster board, and rendering were completed to a very high standard.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Russell Brown</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: url('testimonial-4.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “Had lots of work done on my house. Very clean and professional. Matt is not only skilled but also a genuinely nice person. Highly recommend.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Rob Morris</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="review-slide">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: url('testimonial-5.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “Traditional skills meet modern standards. Matt’s apprenticeship and expertise shine through in every project.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Julian Wood</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: url('testimonial-6.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “I use Matt for all types of home repairs – his work in plastering and property maintenance is outstanding.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Geraint Evans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="review-slide">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: url('testimonial-7.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “The ultimate professional. Can turn his hand to anything, always leaves the job tidy, turns up on time, and gives it 100%.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– David Owen</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: url('testimonial-8.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “Professional, detailed and efficient – Matt’s workmanship is second to none.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Emma Evans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="review-slide">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: url('testimonial-9.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “After reading excellent reviews, I chose Matt for my plastering project. His work was prompt, professional, and flawless.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– David Clunas</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: url('testimonial-10.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “I highly recommend Matt and his team – they converted our attic flawlessly while keeping the work area spotless.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– Wendy Hughes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 6 -->
+      <div class="review-slide">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: url('testimonial-11.jpg') center center/cover no-repeat; border-radius: 8px; position: relative; min-height: 300px;">
+              <div style="background: #fff; border-radius: 8px; padding: 1rem; width: 80%; margin: 2rem; position: absolute; bottom: 0;">
+                <blockquote class="review-text" style="font-size: 1rem; line-height: 1.5; color: #333;">
+                  “Quick, efficient and tidy – Matt provided an excellent internal lime render with minimal disruption.”
+                </blockquote>
+                <p class="review-author" style="font-weight: 600; color: #555;">– James Vousden</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-md-block"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <a href="contact.html" class="btn btn-green" style="text-transform: none;">Speak with a Local Expert Today</a>
+    </div>
+  </div>
+</section>
 
   <!-- AREAS WE SERVE SECTION -->
-  <section class="areas-served container">
-    <div class="areas-box">
-      <h2 class="text-center">Areas We Serve</h2>
-      <p class="text-center">Proudly serving diverse areas across Anglesey and Gwynedd.</p>
-      <div class="areas-dropdown text-center">
-        <select name="areas" class="form-select mx-auto" style="max-width: 300px;" aria-label="Select an area">
-          <option value="Beaumaris">Beaumaris</option>
-          <option value="Holyhead">Holyhead</option>
-          <option value="Menai Bridge">Menai Bridge</option>
-          <option value="Llangefni">Llangefni</option>
-          <option value="Rhosneigr">Rhosneigr</option>
-          <option value="Benllech">Benllech</option>
-          <option value="Newborough">Newborough</option>
-          <option value="Trearddur Bay">Trearddur Bay</option>
-          <option value="Valley">Valley</option>
-          <option value="Amlwch">Amlwch</option>
-          <option value="Red Wharf Bay">Red Wharf Bay</option>
-          <option value="Caernarfon">Caernarfon</option>
-          <option value="Bangor">Bangor</option>
-        </select>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="faq-section container">
-    <h2 class="text-center">Frequently Asked Questions</h2>
-    <div class="accordion accordion-box" id="faqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-            What services do you offer as top local plasterers?
-          </button>
-        </h2>
-        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We offer expert plastering, professional painting &amp; decorating, precise tiling, and comprehensive property maintenance services.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
-            Are your services certified and insured?
-          </button>
-        </h2>
-        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, our team holds NVQ Level 3 qualifications and has received LABC Building Excellence awards. We are fully insured.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-            How long have you been serving Anglesey, Gwynedd, and surrounding areas?
-          </button>
-        </h2>
-        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We have proudly served these areas for over 30 years, consistently delivering high-quality workmanship.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
-            Do you offer free consultations and quotes?
-          </button>
-        </h2>
-        <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, we provide a free consultation and detailed quote so you can understand our process and pricing before starting your project.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeadingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
-            What areas do you serve and do you offer emergency services?
-          </button>
-        </h2>
-        <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We serve a wide range of areas in Anglesey and Gwynedd – including Beaumaris, Holyhead, Menai Bridge, Llangefni, and more. We also offer emergency repair services for urgent needs.
-          </div>
+  <section class="areas-served py-5">
+    <div class="container d-flex justify-content-center">
+      <div class="areas-box text-center" style="max-width: 600px; width: 100%;">
+        <h2>Areas We Serve</h2>
+        <p>Proudly serving diverse areas across Anglesey and Gwynedd.</p>
+        <div class="areas-dropdown mt-3">
+          <select name="areas" class="form-select mx-auto" style="max-width: 300px;" aria-label="Select an area">
+            <option value="Beaumaris">Beaumaris</option>
+            <option value="Holyhead">Holyhead</option>
+            <option value="Menai Bridge">Menai Bridge</option>
+            <option value="Llangefni">Llangefni</option>
+            <option value="Rhosneigr">Rhosneigr</option>
+            <option value="Benllech">Benllech</option>
+            <option value="Newborough">Newborough</option>
+            <option value="Trearddur Bay">Trearddur Bay</option>
+            <option value="Valley">Valley</option>
+            <option value="Amlwch">Amlwch</option>
+            <option value="Red Wharf Bay">Red Wharf Bay</option>
+            <option value="Caernarfon">Caernarfon</option>
+            <option value="Bangor">Bangor</option>
+          </select>
         </div>
       </div>
     </div>
   </section>
+  
+  
+ <!-- FAQ SECTION -->
+ <section class="faq-section container">
+  <h2 class="text-center">Frequently Asked Questions</h2>
+  <div class="accordion accordion-box" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+          What services do you offer as top local plasterers?
+        </button>
+      </h2>
+      <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We offer expert plastering, professional painting &amp; decorating, precise tiling, and comprehensive property maintenance services.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+          Are your services certified and insured?
+        </button>
+      </h2>
+      <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, our team holds NVQ Level 3 qualifications and has received LABC Building Excellence awards. We are fully insured.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+          How long have you been serving Anglesey, Gwynedd, and surrounding areas?
+        </button>
+      </h2>
+      <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We have proudly served these areas for over 30 years, consistently delivering high-quality workmanship.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+          Do you offer free consultations and quotes?
+        </button>
+      </h2>
+      <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, we provide a free consultation and detailed quote so you can understand our process and pricing before starting your project.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="faqHeadingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+          What areas do you serve and do you offer emergency services?
+        </button>
+      </h2>
+      <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          We serve a wide range of areas in Anglesey and Gwynedd – including Beaumaris, Holyhead, Menai Bridge, Llangefni, and more. We also offer emergency repair services for urgent needs.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- SPLIT CTA SECTION -->
   <section class="split-cta-section container-fluid">
@@ -507,16 +603,20 @@
           <p>
             Looking for reliable "local plasterers" or a professional "local painter and decorator"? Our experienced team is here to help with everything from plastering and painting to tiling and property maintenance. Get in touch today!
           </p>
-          <a href="contact.html" class="btn btn-green">Speak with a Local Expert Today &raquo;</a>
+          <a href="contact.html" class="btn btn-green">Talk to a Home Renovation Specialist Now
+            &raquo;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!--======================
+      FOOTER (EXACT copy from About page)
+  ======================-->
   <footer class="footer-dark">
     <div class="container">
       <div class="row">
+        <!-- Logo & Newsletter -->
         <div class="col-md-4 mb-4">
           <div class="d-flex align-items-center mb-3">
             <img src="matt-ward-ppm-logo.png" alt="Logo" style="height: 40px;">
@@ -532,6 +632,7 @@
             <button class="ms-2">Submit</button>
           </div>
         </div>
+        <!-- Pages Links -->
         <div class="col-md-2 mb-4">
           <h5>Pages</h5>
           <ul class="list-unstyled">
@@ -541,6 +642,15 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+                <!-- Pages Links -->
+                <div class="col-md-2 mb-4">
+                  <h5>Policies</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                  </ul>
+                </div>
+        <!-- Follow Us -->
         <div class="col-md-2 mb-4">
           <h5>Follow Us</h5>
           <div class="d-flex gap-2">
@@ -564,6 +674,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossorigin="anonymous"></script>
+  
+  <!-- Reviews JS (unchanged) -->
   <script>
     const reviewSlides = document.querySelectorAll('.review-slide');
     const reviewPrev = document.querySelector('.prev-btn');
@@ -577,7 +689,7 @@
       });
     }
 
-    // Show the first slide initially
+    // Initial display
     showReview(reviewIndex);
 
     reviewPrev.addEventListener('click', () => {
@@ -590,5 +702,17 @@
       showReview(reviewIndex);
     });
   </script>
+  <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // Animation only once
+    duration: 1000, // Animation duration in ms
+    easing: 'ease-in-out'
+  });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,157 @@
+/* VARIABLES */
+:root {
+    --title-color: #7f797d;
+    --subtitle-color: #7f797d;
+    --btn-bg: #645e62;
+    --btn-text: #deda7a;
+    --btn-hover-bg: #deda7a;
+    --btn-hover-text: #645e62;
+    --footer-bg: #ffffff;
+    --footer-text: #645e62;
+    --bg-color: #f0f3ee;
+    --navbar-text: #7f797d;
+    --navbar-bg: #ffffff;
+    --gray: #f2f2f2;
+    --dark: #333;
+    --white: #ffffff;
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--dark);
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--title-color);
+  }
+  
+  /* NAVBAR */
+  .sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: var(--navbar-bg);
+    border-bottom: 1px solid var(--gray);
+  }
+  .navbar-brand img {
+    height: 80px;
+    object-fit: contain;
+  }
+  .company-name {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--title-color);
+  }
+  .navbar-nav .nav-link, .navbar-toggler-icon {
+    color: var(--navbar-text) !important;
+  }
+  .nav-link.active,
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  .btn-contact {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    transition: all 0.3s ease;
+  }
+  .btn-contact:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+  }
+  
+  /* HERO SECTION FOR COOKIE POLICY */
+  .cookie-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('cookie-hero.jpg') no-repeat center center/cover;
+  }
+  .cookie-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+  }
+  .cookie-hero h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+  }
+  
+  /* MAIN CONTENT */
+  .cookie-content {
+    font-family: 'Mulish', sans-serif;
+    color: var(--dark);
+  }
+  .cookie-content h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--title-color);
+  }
+  .cookie-content p, .cookie-content li {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  .cookie-content ul {
+    margin-left: 1.5rem;
+  }
+  
+  /* FOOTER */
+  .footer-dark {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 3rem 1rem;
+  }
+  .footer-dark a {
+    color: var(--footer-text);
+    text-decoration: none;
+  }
+  .footer-dark a:hover {
+    text-decoration: underline;
+  }
+  .newsletter-form input {
+    border: none;
+    padding: 0.5rem;
+    width: 70%;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+  }
+  .newsletter-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  .newsletter-form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive */
+  @media (max-width: 576px) {
+    .company-name {
+      display: none;
+    }
+    .cookie-hero {
+      height: 250px;
+    }
+    .cookie-hero h1 {
+      font-size: 1.8rem;
+    }
+  }
+  

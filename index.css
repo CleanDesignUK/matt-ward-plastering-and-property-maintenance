@@ -30,7 +30,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Container side-padding (for interior sections only) */
+/* Container side-padding */
 .container {
   padding-left: 10px;
   padding-right: 10px;
@@ -43,15 +43,16 @@ html, body {
 }
 
 /* NAVBAR */
-/* Using container (not container-fluid) so navbar has side padding on big screens */
 .sticky-navbar {
-  position: sticky;  /* Changed from fixed to sticky */
+  position: sticky;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 9999;
   background-color: var(--navbar-bg);
   border-bottom: 1px solid var(--gray);
 }
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -91,11 +92,10 @@ html, body {
 }
 
 /* HERO SECTION */
-/* Full-width hero with clamp-based height */
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 550px; /* Increased for extra vertical space */
+  min-height: 800px;
   background: url('hero.jpg') no-repeat center center/cover !important;
   animation: fadeIn 1.5s ease-out forwards;
 }
@@ -108,45 +108,36 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* Added extra top padding so text is centered below the sticky navbar */
   padding-top: 6rem;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--white);
 }
-/* Override container inside hero-overlay to remove side padding */
 .hero-overlay .container {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.hero-overlay h1,
-.hero-overlay p {
+.hero-overlay h1{
   color: var(--white);
 }
-
-/* ADD side padding specifically for the about-intro section */
-.about-us-section {
-  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
-}
-/* ADD side padding specifically for the about-intro section */
-.core-services {
-  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
-}
-/* ADD side padding specifically for the about-intro section */
-.recent-projects {
-  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
-}
-/* ADD side padding specifically for the about-intro section */
-.certs-awards {
-  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
-}
-/* ADD side padding specifically for the about-intro section */
-.areas-served {
-  padding: 3rem 1rem !important; /* top/bottom = 3rem, left/right = 1rem */
+.hero-overlay p {
+  color: var(--white);
+  font-size: 1.5rem;
 }
 
-/* BUTTONS */
+/* Section paddings */
+.about-us-section,
+.core-services,
+.bkb-section,
+.recent-projects,
+.certs-awards,
+.areas-served,
+.faq-section {
+  padding: 3rem 1rem !important;
+}
+
+/* Buttons */
 .btn-green {
   background-color: var(--btn-bg) !important;
   color: var(--btn-text) !important;
@@ -169,10 +160,7 @@ html, body {
   color: var(--btn-text);
 }
 
-/* ABOUT US SECTION */
-.about-us-section {
-  padding: 3rem 0;
-}
+/* About Us */
 .about-us-image img {
   width: 100%;
   border-radius: 4px;
@@ -194,11 +182,7 @@ html, body {
   line-height: 1.6;
 }
 
-/* CORE SERVICES */
-.core-services {
-  background-color: #1b1b1b;
-  padding: 3rem 0;
-}
+/* Core Services */
 .service-card {
   background-color: #fff;
   border-radius: 4px;
@@ -226,15 +210,116 @@ html, body {
   line-height: 1.5;
 }
 
-/* RECENT PROJECTS */
+/* OUR LATEST PROJECTS (with overlay & top radius) */
+.latest-project-hero {
+  position: relative;
+  background: url('our-project.jpg') no-repeat center center/cover;
+  padding: 8rem 1rem;
+  text-align: center;
+  border-radius: 25px 25px 0 0; /* Rounded top edges */
+  overflow: hidden;
+}
+.latest-hero-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.latest-project-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.lp-hero-title {
+  color: var(--btn-text);
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.lp-hero-subtitle {
+  color: #fff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+}
+.lp-hero-desc {
+  color: #fff;
+  margin-top: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.latest-project-cards {
+  background: var(--bg-color);
+  padding: 3rem 1rem;
+}
+.lp-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.lp-card:hover {
+  transform: scale(1.02);
+}
+.lp-card-img {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+.lp-card-body {
+  padding: 1rem;
+}
+.lp-card-meta {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lp-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.lp-card-author-date .author-name {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+.lp-card-author-date .date-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #7f797d;
+  font-family: 'Inter', sans-serif;
+}
+.lp-badge {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 0.8rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Mulish', sans-serif;
+}
+.lp-card-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Recent Projects */
 .recent-projects {
-  padding: 3rem 0;
   text-align: left;
 }
 
-/* CERTIFICATIONS & AWARDS */
+/* Certifications & Awards */
 .certs-awards {
-  padding: 3rem 0;
   text-align: center;
 }
 .certs-awards h2 {
@@ -279,9 +364,8 @@ html, body {
   color: var(--dark);
 }
 
-/* REVIEWS SECTION */
+/* Reviews */
 .reviews-section {
-  padding: 3rem 2rem;
   background-color: #f8f9f3;
 }
 .review-slider {
@@ -305,11 +389,7 @@ html, body {
   color: #555;
 }
 
-/* AREAS WE SERVE */
-.areas-served {
-  padding: 3rem 0;
-  text-align: center;
-}
+/* Areas Served */
 .areas-box {
   background-color: #333;
   padding: 4rem;
@@ -318,24 +398,13 @@ html, body {
   display: inline-block;
   text-align: center;
   transition: transform 0.3s ease;
+  margin: 0 auto;
 }
 .areas-box:hover {
   transform: scale(1.01);
 }
-.areas-box h2,
-.areas-box p {
-  color: var(--white);
-}
 
-/* FAQ SECTION */
-.faq-section {
-  padding: 3rem 0;
-}
-.faq-section h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
+/* FAQ Section */
 .accordion-box {
   background-color: #f8f9fa;
   border-radius: 8px;
@@ -349,7 +418,7 @@ html, body {
   background-color: var(--gray);
 }
 
-/* SPLIT CTA SECTION */
+/* Split CTA Section */
 .split-cta-section {
   margin-bottom: 3rem;
 }
@@ -389,8 +458,7 @@ html, body {
   color: var(--btn-text) !important;
 }
 
-/* FOOTER */
-/* Override footer container to have no side padding */
+/* Footer */
 .footer-dark .container {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -426,9 +494,7 @@ html, body {
   opacity: 0.8;
 }
 
-/*====================================
-  RESPONSIVE MEDIA QUERIES
-====================================*/
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .core-services .col-md-3 {
     width: 100%;
@@ -487,12 +553,21 @@ html, body {
   .areas-box {
     padding: 2rem;
   }
-  .review-slide .col-md-6 > div {
-    min-height: 250px !important;
-  }
   .review-slide div[style*="margin: 2rem"] {
     margin: 1rem !important;
     width: 90% !important;
     padding: 0.5rem !important;
+  }
+  .hero-section {
+    min-height: 400px;
+  }
+  .review-slide .col-md-6 > div {
+    min-height: 250px !important;
+  }
+  .bkb-section .d-flex.align-items-center > div[style*="border-radius: 50%"] {
+    flex-shrink: 0;
+  }
+  .lp-card-img {
+    height: 200px !important;
   }
 }

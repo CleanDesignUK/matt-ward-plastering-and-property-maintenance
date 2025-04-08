@@ -16,7 +16,6 @@
   }
 }
 
-
 /* Variables (matching index) */
 :root {
   --title-color: #7f797d;
@@ -205,10 +204,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dark);
 }
 .service-box-link {
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #645e62;
+  font-weight: 800;
+  color: #deda7a;
   text-decoration: none;
 }
 .service-box-link:hover {
@@ -419,4 +418,121 @@ h1, h2, h3, h4, h5, h6 {
   .stats-row .stat-box, .testimonials-row .testimonial-card {
     margin: 1rem auto;
   }
+}
+
+/* ================================
+   NEW SECTION: EXACT SCREENSHOT STYLE
+   ================================= */
+.exactly-like-screenshot {
+  background-color: #3c393b; /* Black background at the top */
+  color: #fff;
+}
+
+/* "RESEARCH" badge */
+.research-badge {
+  display: inline-block;
+  background-color: #deda7a; /* Green badge color (per screenshot style) */
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Main heading */
+.screenshot-heading {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Subtitle text */
+.screenshot-subtitle {
+  font-size: 1rem;
+  color: #dddddd;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Author container */
+.screenshot-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circular avatar image */
+.author-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Author name & date */
+.author-name,
+.author-date {
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Teal box (the large rectangle below) */
+.teal-box {
+  width: 100%;
+  height: 300px;
+  background-color: #aef1f9; /* Teal color from the screenshot */
+  border-radius: 15px;
+  /* Optional: If your screenshot has fully squared corners, remove border-radius */
+}
+.service-img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.service-img:hover {
+  transform: scale(1.03);
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #dddddd;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  padding: 10px;
+}
+.cta-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  background-color: #f7f7f7; /* Light background color */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #eaeaea;
+  border-color: #999;
 }
