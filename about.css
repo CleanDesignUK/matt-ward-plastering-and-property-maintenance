@@ -40,7 +40,7 @@ html, body {
   color: var(--dark);
   background-color: var(--bg-color) !important;
   max-width: 100%;
-  overflow-x: hidden;
+
 }
 
 /* Force .container to have no side padding, like Contact */

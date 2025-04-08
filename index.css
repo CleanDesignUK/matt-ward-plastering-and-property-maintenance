@@ -15,6 +15,15 @@
   --white: #ffffff;
 }
 
+
+.sticky-navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1050 !important;
+  background-color: var(--navbar-bg);  /* Optional: Ensure the background is set */
+}
+
+
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -27,7 +36,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+
 }
 
 /* Container side-padding */
@@ -44,7 +53,7 @@ html, body {
 
 /* NAVBAR */
 .sticky-navbar {
-  position: sticky;
+  position: sticky !important;
   top: 0;
   left: 0;
   width: 100%;

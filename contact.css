@@ -38,7 +38,7 @@ html, body {
   color: var(--dark);
   /* Remove horizontal scroll */
   max-width: 100%;
-  overflow-x: hidden;
+
 }
 
 /* Add side whitespace for the body */
