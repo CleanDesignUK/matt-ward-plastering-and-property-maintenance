@@ -90,6 +90,24 @@
     color: var(--btn-hover-text);
   }
   
+/* Add or update these rules for small-screen "Matt Ward" styling */
+.company-name-sm {
+  display: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;            /* Increased font size */
+  font-weight: 600;             /* Thicker (bolder) font */
+  text-decoration: underline;
+  text-decoration-color: #4e894f;
+  text-decoration-thickness: 3px; /* Thicker underline */
+  text-align: center;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .company-name-sm {
+    display: block;
+}
+}
+
   /* Reusable Buttons */
   .btn-purchase {
     background-color: var(--btn-bg);
