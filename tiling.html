@@ -34,6 +34,24 @@
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="tiling.css" />
+
+  <script>
+    function loadGoogleAnalytics() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-EW179RBYTB";
+      document.head.appendChild(script);
+  
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-EW179RBYTB');
+    }
+  
+    // Example: Call loadGoogleAnalytics() only after user gives consent.
+    // if (userConsented) { loadGoogleAnalytics(); }
+  </script>
+
 </head>
 <body>
   <!--======================
