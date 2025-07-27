@@ -2,20 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Professional property renovations, repairs, and upgrades. Our local renovation experts deliver comprehensive home renovations and efficient property repairs." />
-  <meta name="keywords" content="property renovations, home renovations, property repairs, local renovation experts, house repairs" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Renovations | Matt Ward Plastering &amp; Property Maintenance</title>
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://mattwardpropertymaintenance.co.uk/renovations.html" />
+
+  <!-- ===== SEO ===== -->
+  <title>Property Renovations in Anglesey | Matt Ward Property Maintenance</title>
+  <meta name="description"
+        content="Full home renovations & prompt property repairs across Anglesey. Kitchens, bathrooms, structural upgrades – free quotes, quality workmanship.">
+  <meta name="keywords"
+        content="property renovations Anglesey, home renovations, house repairs, structural upgrades, local renovation experts">
+
+  <link rel="canonical" href="https://mattwardpropertymaintenance.co.uk/renovations.html">
 
   <!-- Open Graph -->
-  <meta property="og:title"       content="Renovations | Matt Ward Plastering &amp; Property Maintenance" />
-  <meta property="og:description" content="Professional property renovations, repairs, and upgrades. Our local renovation experts deliver comprehensive home renovations and efficient property repairs." />
-  <meta property="og:url"         content="https://mattwardpropertymaintenance.co.uk/renovations.html" />
-  <meta property="og:type"        content="website" />
-  <meta property="og:image"       content="https://mattwardpropertymaintenance.co.uk/matt-ward-ppm-logo.png" />
+  <meta property="og:title" content="Property Renovations in Anglesey | Matt Ward Property Maintenance">
+  <meta property="og:description" content="Local experts delivering comprehensive renovations, extensions & repairs throughout Anglesey.">
+  <meta property="og:url" content="https://mattwardpropertymaintenance.co.uk/renovations.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mattwardpropertymaintenance.co.uk/matt-ward-ppm-logo.png">
+
+  <!-- ===== LocalBusiness Schema ===== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HomeAndConstructionBusiness",
+    "name":"Matt Ward Plastering & Property Maintenance",
+    "url":"https://mattwardpropertymaintenance.co.uk/",
+    "image":"https://mattwardpropertymaintenance.co.uk/matt-ward-ppm-logo.png",
+    "telephone":"07724 648916",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Beaumaris",
+      "addressRegion":"Anglesey",
+      "postalCode":"LL58 8AT",
+      "addressCountry":"GB"
+    },
+    "serviceArea":{
+      "@type":"AdministrativeArea",
+      "name":"Anglesey"
+    }
+  }
+  </script>
+
+  <!-- ===== Google Analytics (site-wide) ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EW179RBYTB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EW179RBYTB');
+  </script>
 
 
  <!-- Favicon -->
@@ -46,22 +81,6 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="renovations.css" />
 
-  <script>
-    function loadGoogleAnalytics() {
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-EW179RBYTB";
-      document.head.appendChild(script);
-  
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-EW179RBYTB');
-    }
-  
-    // Example: Call loadGoogleAnalytics() only after user gives consent.
-    // if (userConsented) { loadGoogleAnalytics(); }
-  </script>
   
 </head>
 <body>
@@ -121,19 +140,20 @@
   <!--======================
       SECTION 1 (Hero + Title Left, Image Right)
   ======================-->
-  <section class="plastering-hero d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
+  <section class="plastering-hero d-flex align-items-center overflow-hidden">
+    <div class="container-fluid px-lg-5">
+      <div class="row g-0 align-items-center">
         <!-- Left Text Column -->
         <div class="col-md-6">
-          <h1 class="plastering-heading">PROPERTY RENOVATIONS &amp; REPAIRS</h1>
+          <h1 class="plastering-heading">PROPERTY RENOVATIONS &amp; REPAIRS <br> Across Anglesey</h1>
           <p class="plastering-subheading">
-            Transform your property with our expert renovations and repairs. From comprehensive home renovations to timely property repairs, we deliver quality, lasting results.
+            Transform your Anglesey & Gwynedd home with our Beaumaris-based renovation specialists. From Holyhead kitchen remodels to Menai Bridge structural upgrades, we deliver high-quality, long-lasting results that add real value to local properties.
+
           </p>
           <a href="contact.html" class="btn btn-purchase">Revitalise Your Home Today</a>
         </div>
         <!-- Right Image Column -->
-        <div class="col-md-6 text-center hero-img-col">
+        <div class="col-lg-6 text-center">
           <img src="renovation-hero.jpg" alt="Renovation Project" class="img-fluid hero-img" />
         </div>
       </div>
