@@ -1,0 +1,11 @@
+# robots.txt for https://mattwardpropertymaintenance.co.uk/
+
+User-agent: *
+Disallow:
+
+# (Optional) tighten up admin or draft areas if you ever add them.
+# Disallow: /admin/
+# Disallow: /drafts/
+
+# XML sitemap location
+Sitemap: https://mattwardpropertymaintenance.co.uk/sitemap.xml

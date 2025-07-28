@@ -79,9 +79,25 @@
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="services.css" />
+<link rel="stylesheet" href="cookie.css" />
 
 </head>
 <body>
+  <!-- COOKIE BANNER -->
+<div id="cookie-banner" role="dialog" aria-live="polite" class="cookie-banner">
+  <div class="cookie-content">
+    <p>
+      🍪 We use cookies to improve your browsing experience, deliver personalised content, and analyse our traffic. 
+      By clicking “Accept All”, you consent to our use of cookies. See our 
+      <a href="cookie-policy.html">Cookie Policy</a> for details.
+    </p>
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="btn-accept">Accept All 🍪</button>
+      <button id="cookie-decline" class="btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
   <!--======================
       NAVBAR (matching index)
   ======================-->
@@ -563,6 +579,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
   AOS.init({ once: true, duration: 1000 });
 </script>
+<script src="cookie.js"></script>
 
 </body>
 </html>
