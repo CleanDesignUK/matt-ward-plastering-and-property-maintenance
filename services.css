@@ -244,6 +244,24 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
+/* Featured Project Management card */
+.service-box-pm {
+  border: 2px solid #deda7a;
+  background-color: #ffffff;
+  margin-top: 1rem;
+}
+
+.service-box-pm .service-box-title {
+  letter-spacing: 0.05em;
+}
+
+.service-box-pm .service-box-text {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /* WHY CHOOSE US? with WOW factor and line curve background */
 .why-choose-us {
   background-color: #645e62;
